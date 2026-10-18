@@ -50,44 +50,46 @@ jobs:
                   filename = path.split('/')[-1]
                   lines.append(f'{url},_Arcade/cores/{filename}')
               elif path.endswith('.mra'):
-                  lines.append(f'{url},_Arcade/Unofficial/{target_folder}/{path}')
+                  stripped = path
+                  if stripped.startswith('_Arcade/'):
+                      stripped = stripped[len('_Arcade/'):]
+                  lines.append(f'{url},_Arcade/Unofficial/{target_folder}/{stripped}')
           print('\n'.join(lines))
           " >> external_files.csv
-          
-            # --- Part 2: Pull in the dev's own external_files.csv (archive.org etc.) ---
-           curl -s \
-           -H "Authorization: token $GITHUB_TOKEN" \
+
+            # --- Part 2: Pull .zip ROMs from dev's external_files.csv ---
+            curl -s \
+              -H "Authorization: token $GITHUB_TOKEN" \
               "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
-          | python3 -c "
+              | python3 -c "
           import sys, re
 
           url_pattern = re.compile(r'^https?://')
 
           for line in sys.stdin:
-          line = line.strip()
-          if not line or line.startswith('#'):
-            continue
-          parts = [p.strip() for p in line.split(',')]
+              line = line.strip()
+              if not line or line.startswith('#'):
+                  continue
+              parts = [p.strip() for p in line.split(',')]
 
-         # Find which field is the URL
-       url = None
-       path = None
-    for p in parts:
-        if url_pattern.match(p):
-            url = p
-        elif p.endswith('.zip'):
-            path = p
+              url = None
+              path = None
+              for p in parts:
+                  if url_pattern.match(p):
+                      url = p
+                  elif p.endswith('.zip'):
+                      path = p
 
-    if url and path:
-        print(f'{url},{path}')
-    elif url and not path:
-        filename = url.split('/')[-1].split('?')[0]
-        print(f'{url},games/mame/{filename}')
-     " >> external_files.csv   
+              if url and path:
+                  print(f'{url},{path}')
+              elif url and not path:
+                  filename = url.split('/')[-1].split('?')[0]
+                  print(f'{url},games/mame/{filename}')
+          " >> external_files.csv
           done
 
-    - name: Commit changes if any
-         run: |
+      - name: Commit changes if any
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add external_files.csv
@@ -96,4 +98,4 @@ jobs:
           else
             git commit -m "Sync: updated external_files.csv"
             git push
-          fi
+          fi   
