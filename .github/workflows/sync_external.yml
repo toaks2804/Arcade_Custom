@@ -81,10 +81,10 @@ jobs:
                       path = p
 
               if url and path:
-                  print(f'{url},{path}')
+                  print(f'{path},{url}')
               elif url and not path:
                   filename = url.split('/')[-1].split('?')[0]
-                  print(f'{url},games/mame/{filename}')
+                  print(f'games/mame/{filename},{url}')
           " >> external_files.csv
           done
 
