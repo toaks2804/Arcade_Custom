@@ -1,1 +1,66 @@
+name: Sync External Cores
 
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scan all dev repos
+        run: |
+          DEVS=(
+            "devusername/devrepo/main:dev1"
+            "otherdev/otherrepo/main:dev2"
+            "thirddev/thirdrepo/master:dev3"
+          )
+
+          > external_files.csv
+
+          for entry in "${DEVS[@]}"; do
+            IFS=':' read -r repo_spec target_folder <<< "$entry"
+            IFS='/' read -r owner repo branch <<< "$repo_spec"
+
+            curl -s \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$owner/$repo/git/trees/$branch?recursive=1" \
+              | python3 -c "
+          import sys, json
+          data = json.load(sys.stdin)
+          tree = data.get('tree', [])
+          owner, repo, branch = '$owner', '$repo', '$branch'
+          target_folder = '$target_folder'
+          lines = []
+          for item in tree:
+              if item['type'] != 'blob':
+                  continue
+              path = item['path']
+              url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}'
+              if path.endswith('.rbf'):
+                  filename = path.split('/')[-1]
+                  lines.append(f'{url},_Arcade/cores/{filename}')
+              elif path.endswith('.mra'):
+                  lines.append(f'{url},_Arcade/Unofficial/{target_folder}/{path}')
+          print('\n'.join(lines))
+          " >> external_files.csv
+          done
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add external_files.csv
+          if git diff --cached --quiet; then
+            echo "No changes to sync."
+          else
+            git commit -m "Sync: updated external_files.csv"
+            git push
+          fi   
