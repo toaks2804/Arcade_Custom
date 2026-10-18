@@ -17,7 +17,7 @@ jobs:
       - name: Scan all dev repos
         run: |
           DEVS=(
-            "devusername/devrepo/main:dev1"
+            "kuzearcade/kuzecores/main:KuzeArcade"
             "otherdev/otherrepo/main:dev2"
             "thirddev/thirdrepo/master:dev3"
           )
