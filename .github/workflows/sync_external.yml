@@ -23,7 +23,22 @@ jobs:
             "meathax/meatcores/main:Meathax"
           )
 
-          > external_files.csv
+          # Wipe only the auto-generated section
+          python3 -c "
+          import re
+          with open('external_files.csv', 'r') as f:
+              content = f.read()
+          content = re.sub(
+              r'# === AUTO-GENERATED ===.*?# === END AUTO-GENERATED ===\n?',
+              '',
+              content,
+              flags=re.DOTALL
+          )
+          with open('external_files.csv', 'w') as f:
+              f.write(content)
+          "
+
+          echo "# === AUTO-GENERATED ===" >> external_files.csv
 
           for entry in "${DEVS[@]}"; do
             IFS=':' read -r repo_spec target_folder <<< "$entry"
@@ -87,6 +102,8 @@ jobs:
                   print(f'games/mame/{filename},{url}')
           " >> external_files.csv
           done
+
+          echo "# === END AUTO-GENERATED ===" >> external_files.csv
 
       - name: Commit changes if any
         run: |
