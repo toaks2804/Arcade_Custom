@@ -21,7 +21,6 @@ jobs:
           DEVS=(
             "kuzearcade/kuzecores/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "thirddev/thirdrepo/master:dev3"
           )
 
           > external_files.csv
