@@ -30,6 +30,7 @@ jobs:
             IFS=':' read -r repo_spec target_folder <<< "$entry"
             IFS='/' read -r owner repo branch <<< "$repo_spec"
 
+            # --- Part 1: Scan repo tree for .rbf and .mra files ---
             curl -s \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: token $GITHUB_TOKEN" \
@@ -53,6 +54,36 @@ jobs:
                   lines.append(f'{url},_Arcade/Unofficial/{target_folder}/{path}')
           print('\n'.join(lines))
           " >> external_files.csv
+          
+            # --- Part 2: Pull in the dev's own external_files.csv (archive.org etc.) ---
+            curl -s \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
+              | python3 -c "
+          import sys
+          target_folder = '$target_folder'
+          for line in sys.stdin:
+              line = line.strip()
+              if not line or line.startswith('#'):
+                  continue
+              parts = line.rsplit(',', 1)
+              if len(parts) == 2:
+                  url, original_path = parts
+                  # Remap target path to your structure
+                  filename = original_path.split('/')[-1]
+                  if filename.endswith('.rbf'):
+                      new_path = f'_Arcade/cores/{filename}'
+                  else:
+                      new_path = f'_Arcade/Unofficial/{target_folder}/{original_path}'
+                  print(f'{url},{new_path}')
+              else:
+                  # Single-column entry (just a URL, no target path)
+                  filename = line.split('/')[-1]
+                  if filename.endswith('.rbf'):
+                      print(f'{line},_Arcade/cores/{filename}')
+                  else:
+                      print(f'{line},_Arcade/Unofficial/{target_folder}/{filename}')
+          " >> external_files.csv
           done
 
       - name: Commit changes if any
@@ -65,4 +96,4 @@ jobs:
           else
             git commit -m "Sync: updated external_files.csv"
             git push
-          fi   
+          fi
