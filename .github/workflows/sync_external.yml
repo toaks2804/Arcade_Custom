@@ -23,7 +23,7 @@ jobs:
             "meathax/meatcores/main:Meathax"
           )
 
-          # Wipe only the auto-generated section
+          # Wipe only the auto-generated section, preserve manual entries
           python3 -c "
           import re
           with open('external_files.csv', 'r') as f:
@@ -99,7 +99,8 @@ jobs:
                   print(f'{path},{url}')
               elif url and not path:
                   filename = url.split('/')[-1].split('?')[0]
-                  print(f'games/mame/{filename},{url}')
+                  if filename.endswith('.zip'):
+                      print(f'games/mame/{filename},{url}')
           " >> external_files.csv
           done
 
