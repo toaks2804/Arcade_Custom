@@ -18,7 +18,7 @@ jobs:
         run: |
           DEVS=(
             "kuzearcade/kuzecores/main:KuzeArcade"
-            "otherdev/otherrepo/main:dev2"
+            "meathax/meatcores/main:Meathax"
             "thirddev/thirdrepo/master:dev3"
           )
 
