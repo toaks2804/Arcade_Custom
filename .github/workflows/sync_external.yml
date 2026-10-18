@@ -68,12 +68,12 @@ jobs:
               url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}'
               if path.endswith('.rbf'):
                   filename = path.split('/')[-1]
-                  lines.append(f'{url},_Arcade/cores/{filename}')
+                  lines.append(f'_Arcade/cores/{filename},{url}')
               elif path.endswith('.mra'):
                   stripped = path
                   if stripped.startswith('_Arcade/'):
                       stripped = stripped[len('_Arcade/'):]
-                  lines.append(f'{url},_Arcade/Unofficial/{target_folder}/{stripped}')
+                  lines.append(f'_Arcade/Unofficial/{target_folder}/{stripped},{url}')
           print('\n'.join(lines))
           " >> external_files.csv
 
