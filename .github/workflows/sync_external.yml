@@ -19,7 +19,12 @@ jobs:
       - name: Scan all dev repos
         run: |
           DEVS=(
-            "kuzearcade/kuzecores/main:KuzeArcade"
+            "kuzearcade/Arcade-GingaNin_MiSTer/main:KuzeArcade"
+            "kuzearcade/Arcade-JalecoMS1BCD_MiSTer/main:KuzeArcade"
+            "kuzearcade/Arcade-NamcoSystem2_MiSTer/main:KuzeArcade"
+            "kuzearcade/Arcade-NMK16_MiSTer/main:KuzeArcade"
+            "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
+            "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
           )
 
