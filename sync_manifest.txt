@@ -11,8 +11,8 @@ _Arcade/_Unofficial/_Blahm1d/Gladiator (US) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/High Impact Football (rev LA5 02-15-91) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Hit 'n Miss [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Invasion - The Abductors (version 5.0) [blahm1d].mra
-_Arcade/_Unofficial/_Blahm1d/Judge Dredd (rev TA1 7-12-92  location test) [blahm1d].mra
-_Arcade/_Unofficial/_Blahm1d/Mortal Kombat (rev 4.0 09-28-92  Y-Unit) [blahm1d].mra
+_Arcade/_Unofficial/_Blahm1d/Judge Dredd (rev TA1 7-12-92, location test) [blahm1d].mra
+_Arcade/_Unofficial/_Blahm1d/Mortal Kombat (rev 4.0 09-28-92, Y-Unit) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Mortal Kombat (rev 5.0 T-Unit 03-19-93) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Mortal Kombat 3 (rev 2.1) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Mortal Kombat 4 (version 3.0) [blahm1d].mra
@@ -23,7 +23,7 @@ _Arcade/_Unofficial/_Blahm1d/NBA Jam Tournament Edition (rev 4.0 3-23-94) [blahm
 _Arcade/_Unofficial/_Blahm1d/NBA Maximum Hangtime (L1.03 06-09-97) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/NHL Open Ice - 2 on 2 Challenge (rev 1.21) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Narc (rev 7.00) [blahm1d].mra
-_Arcade/_Unofficial/_Blahm1d/Night Slashers (Over Sea Rev 1.2  DE-0397-0 PCB) [blahm1d].mra
+_Arcade/_Unofficial/_Blahm1d/Night Slashers (Over Sea Rev 1.2, DE-0397-0 PCB) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Off Road Challenge (rev 1.63) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Rampage World Tour [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Revolution X [blahm1d].mra
@@ -42,15 +42,15 @@ _Arcade/_Unofficial/_Blahm1d/WWF WrestleMania (rev 1.30 08-10-95) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/War Gods (HD 10-09-1996 - Dual Resolution) [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/Who Dunit [blahm1d].mra
 _Arcade/_Unofficial/_Blahm1d/_Alternatives/_Gladiator/Ougon no Shiro (Japan) [blahm1d].mra
-_Arcade/_Unofficial/_Blahm1d/_Alternatives/_Night Slashers/Night Slashers (Japan Rev 1.2  DE-0397-0 PCB) [blahm1d].mra
-_Arcade/_Unofficial/_Blahm1d/_Alternatives/_Night Slashers/Night Slashers (Korea Rev 1.3  DE-0397-0 PCB) [blahm1d].mra
+_Arcade/_Unofficial/_Blahm1d/_Alternatives/_Night Slashers/Night Slashers (Japan Rev 1.2, DE-0397-0 PCB) [blahm1d].mra
+_Arcade/_Unofficial/_Blahm1d/_Alternatives/_Night Slashers/Night Slashers (Korea Rev 1.3, DE-0397-0 PCB) [blahm1d].mra
 _Arcade/_Unofficial/_Gm0rk/Hydra.mra
 _Arcade/_Unofficial/_Gm0rk/Pit Fighter (rev 9).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Hydra/Hydra (prototype 5-14-90).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Hydra/Hydra (prototype 5-25-90).mra
-_Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (Japan rev 3  2 players).mra
+_Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (Japan rev 3, 2 players).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (bootleg).mra
-_Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 1  2 players).mra
+_Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 1, 2 players).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 2).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 3).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 4).mra
@@ -58,90 +58,191 @@ _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 5).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 6).mra
 _Arcade/_Unofficial/_Gm0rk/_Alternatives/_Pit Fighter/Pit Fighter (rev 7).mra
 _Arcade/_Unofficial/_KuzeArcade/64th. Street- A Detective Story (World).mra
+_Arcade/_Unofficial/_KuzeArcade/Acrobat Mission.mra
+_Arcade/_Unofficial/_KuzeArcade/Air Attack (set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Assault (Rev B).mra
 _Arcade/_Unofficial/_KuzeArcade/Avenging Spirit.mra
 _Arcade/_Unofficial/_KuzeArcade/Big Striker.mra
-_Arcade/_Unofficial/_KuzeArcade/Bubble Trouble - Golly! Ghost! 2 (World  Rev B).mra
-_Arcade/_Unofficial/_KuzeArcade/Burning Force (Japan  new version (Rev C)).mra
-_Arcade/_Unofficial/_KuzeArcade/Chimera Beast (Japan  prototype  set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/Bio-ship Paladin.mra
+_Arcade/_Unofficial/_KuzeArcade/Black Heart.mra
+_Arcade/_Unofficial/_KuzeArcade/Bombjack Twin (set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/Bubble 2000.mra
+_Arcade/_Unofficial/_KuzeArcade/Bubble Trouble - Golly! Ghost! 2 (World, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/Burning Force (Japan, new version (Rev C)).mra
+_Arcade/_Unofficial/_KuzeArcade/Chimera Beast (Japan, prototype, set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Cosmo Gang the Video (US).mra
 _Arcade/_Unofficial/_KuzeArcade/Cybattler.mra
 _Arcade/_Unofficial/_KuzeArcade/Dirt Fox (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/Dragon Saber (World  DO2).mra
+_Arcade/_Unofficial/_KuzeArcade/Dolmen.mra
+_Arcade/_Unofficial/_KuzeArcade/Dragon Saber (World, DO2).mra
 _Arcade/_Unofficial/_KuzeArcade/E.D.F.- Earth Defense Force (set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Final Lap (Rev E).mra
-_Arcade/_Unofficial/_KuzeArcade/Final Lap 2 (World  Rev B).mra
-_Arcade/_Unofficial/_KuzeArcade/Final Lap 3 (World  Rev C).mra
+_Arcade/_Unofficial/_KuzeArcade/Final Lap 2 (World, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/Final Lap 3 (World, Rev C).mra
 _Arcade/_Unofficial/_KuzeArcade/Finest Hour (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/Four Trax (World).mra
 _Arcade/_Unofficial/_KuzeArcade/Ginga Ninkyouden (set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Golly! Ghost!.mra
+_Arcade/_Unofficial/_KuzeArcade/Guardian Storm (horizontal, not encrypted).mra
+_Arcade/_Unofficial/_KuzeArcade/GunNail (28th May. 1992).mra
+_Arcade/_Unofficial/_KuzeArcade/Hacha Mecha Fighter (19th Sep. 1991, protected, set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Hayaoshi Quiz Ouza Ketteisen- The King Of Quiz.mra
-_Arcade/_Unofficial/_KuzeArcade/Kyuukai Douchuuki (Japan  new version (Rev B)).mra
+_Arcade/_Unofficial/_KuzeArcade/Koutetsu Yousai Strahl (World).mra
+_Arcade/_Unofficial/_KuzeArcade/Kyuukai Douchuuki (Japan, new version (Rev B)).mra
 _Arcade/_Unofficial/_KuzeArcade/Lucky & Wild.mra
 _Arcade/_Unofficial/_KuzeArcade/Macross Plus.mra
+_Arcade/_Unofficial/_KuzeArcade/Mang-Chi.mra
+_Arcade/_Unofficial/_KuzeArcade/Many Block.mra
 _Arcade/_Unofficial/_KuzeArcade/Marvel Land (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/Metal Hawk (Rev C).mra
-_Arcade/_Unofficial/_KuzeArcade/Mirai Ninja (Japan  set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/Mirai Ninja (Japan, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/Nouryoku Koujou Iinkai.mra
 _Arcade/_Unofficial/_KuzeArcade/Ordyne (World).mra
-_Arcade/_Unofficial/_KuzeArcade/Peek-a-Boo! (Japan  ver. 1.1).mra
+_Arcade/_Unofficial/_KuzeArcade/Peek-a-Boo! (Japan, ver. 1.1).mra
 _Arcade/_Unofficial/_KuzeArcade/Phelios.mra
+_Arcade/_Unofficial/_KuzeArcade/Pop's Pop's.mra
+_Arcade/_Unofficial/_KuzeArcade/Power Instinct (USA).mra
+_Arcade/_Unofficial/_KuzeArcade/Puzzle World.mra
 _Arcade/_Unofficial/_KuzeArcade/Quiz Bishoujo Senshi Sailor Moon - Chiryoku Tairyoku Toki no Un.mra
+_Arcade/_Unofficial/_KuzeArcade/Rapid Hero (NMK).mra
 _Arcade/_Unofficial/_KuzeArcade/Rolling Thunder 2.mra
+_Arcade/_Unofficial/_KuzeArcade/S.S. Mission.mra
+_Arcade/_Unofficial/_KuzeArcade/Saboten Bombers (set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/Sand Scorpion.mra
+_Arcade/_Unofficial/_KuzeArcade/SdramTest.mra
+_Arcade/_Unofficial/_KuzeArcade/Spectrum 2000 (vertical, Korea).mra
+_Arcade/_Unofficial/_KuzeArcade/Stagger I (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/Steel Gunner (Rev B).mra
 _Arcade/_Unofficial/_KuzeArcade/Steel Gunner 2 (US).mra
+_Arcade/_Unofficial/_KuzeArcade/Super Spacefortress Macross - Chou-Jikuu Yousai Macross.mra
+_Arcade/_Unofficial/_KuzeArcade/Super Spacefortress Macross II - Chou-Jikuu Yousai Macross II.mra
 _Arcade/_Unofficial/_KuzeArcade/Super World Stadium '92 (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/Super World Stadium '93 (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/Super World Stadium (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/Suzuka 8 Hours (World  Rev C).mra
-_Arcade/_Unofficial/_KuzeArcade/Suzuka 8 Hours 2 (World  Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/Suzuka 8 Hours (World, Rev C).mra
+_Arcade/_Unofficial/_KuzeArcade/Suzuka 8 Hours 2 (World, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/Task Force Harrier.mra
+_Arcade/_Unofficial/_KuzeArcade/Thunder Dragon (8th Jan. 1992, unprotected).mra
+_Arcade/_Unofficial/_KuzeArcade/Thunder Dragon 2 (9th Nov. 1993).mra
+_Arcade/_Unofficial/_KuzeArcade/Tom Tom Magic.mra
+_Arcade/_Unofficial/_KuzeArcade/Twin Action.mra
+_Arcade/_Unofficial/_KuzeArcade/US AAF Mustang (25th May. 1990).mra
 _Arcade/_Unofficial/_KuzeArcade/Valkyrie no Densetsu (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_64th. Street- A Detective Story/64th. Street- A Detective Story (Japan  set 1).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_64th. Street- A Detective Story/64th. Street- A Detective Story (Japan  set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/Vandyke (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_64th. Street- A Detective Story/64th. Street- A Detective Story (Japan, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_64th. Street- A Detective Story/64th. Street- A Detective Story (Japan, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Acrobat Mission/Acrobat Mission (bootleg with Raiden sounds).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Air Attack/Air Attack (set 2).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Assault/Assault (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Assault/Assault Plus (Japan).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Avenging Spirit/Monky Elf (Korean bootleg of Avenging Spirit).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bubble Trouble - Golly! Ghost! 2/Bubble Trouble - Golly! Ghost! 2 (Japan  Rev C).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Burning Force/Burning Force (Japan  old version).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Chimera Beast/Chimera Beast (Japan  prototype  set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bio-ship Paladin/Space Battle Ship Gomorrah (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Black Heart/Black Heart (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bombjack Twin/Bombjack Twin (prototype with adult pictures, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bombjack Twin/Bombjack Twin (prototype with adult pictures, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bombjack Twin/Bombjack Twin (set 1) (low lag v2 TREX).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bombjack Twin/Bombjack Twin (set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bubble 2000/Bubble 2000 V1.2.mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bubble 2000/Hot Bubble (Korea).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bubble 2000/Hot Bubble (Korea, with adult pictures).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Bubble Trouble - Golly! Ghost! 2/Bubble Trouble - Golly! Ghost! 2 (Japan, Rev C).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Burning Force/Burning Force (Japan, old version).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Chimera Beast/Chimera Beast (Japan, prototype, set 2).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Cosmo Gang the Video/Cosmo Gang the Video (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Dragon Saber/Dragon Saber (Japan  Rev B).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Dragon Saber/Dragon Saber (World  older).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Dolmen/Goindol (Afega).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Dragon Saber/Dragon Saber (Japan, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Dragon Saber/Dragon Saber (World, older).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_E.D.F.- Earth Defense Force/E.D.F.- Earth Defense Force (North America).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_E.D.F.- Earth Defense Force/E.D.F.- Earth Defense Force (set 2).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_E.D.F.- Earth Defense Force/E.D.F.- Earth Defense Force (set 3).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 2/Final Lap 2 (Japan  Rev B).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 2/Final Lap 2 (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 3/Final Lap 3 (Japan  Rev C).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 2/Final Lap 2 (Japan, Rev B).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 3/Final Lap 3 (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 3/Final Lap 3 (Japan, Rev C).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 3/Final Lap 3 (World).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap 3/Final Lap 3 (bootleg).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Japan  Rev B).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Japan  Rev C).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Japan, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Japan, Rev C).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Rev C).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Final Lap/Final Lap (Rev D).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Four Trax/Four Trax (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Four Trax/Four Trax (US  censored banners).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Four Trax/Four Trax (US, censored banners).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Ginga Ninkyouden/Ginga Ninkyouden (set 2).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Kyuukai Douchuuki/Kyuukai Douchuuki (Japan  old version).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Guardian Storm (Germany).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Guardian Storm (horizontal, Australia).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Guardian Storm (vertical).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Hong Hu Zhanji II (China, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Hong Hu Zhanji II (China, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Jeon Sin - Guardian Storm (Korea).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Guardian Storm/Sen Jing - Guardian Storm (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_GunNail/GunNail (bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_GunNail/GunNail (location test).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_GunNail/GunNail (trap15 Alarm Reduction).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Hacha Mecha Fighter/Hacha Mecha Fighter (19th Sep. 1991, protected, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Hacha Mecha Fighter/Hacha Mecha Fighter (19th Sep. 1991, unprotected, bootleg Thunder Dragon conversion).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Hacha Mecha Fighter/Hacha Mecha Fighter (Location Test Prototype, 19th Sep. 1991).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Hacha Mecha Fighter/Hacha Mecha Fighter (bootleg with Raiden sounds).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Koutetsu Yousai Strahl/Koutetsu Yousai Strahl (Japan set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Koutetsu Yousai Strahl/Koutetsu Yousai Strahl (Japan set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Koutetsu Yousai Strahl/Koutetsu Yousai Strahl (Japan, bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Kyuukai Douchuuki/Kyuukai Douchuuki (Japan, old version).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Lucky & Wild/Lucky & Wild (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Marvel Land/Marvel Land (US  prototype).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Metal Hawk/Metal Hawk (Japan  Rev F).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Mirai Ninja/Mirai Ninja (Japan  set 2).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Ordyne/Ordyne (Japan  English Version).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Marvel Land/Marvel Land (US, prototype).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Metal Hawk/Metal Hawk (Japan, Rev F).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Mirai Ninja/Mirai Ninja (Japan, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Nouryoku Koujou Iinkai/Nouryoku Koujou Iinkai (prototype).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Ordyne/Ordyne (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Peek-a-Boo!/Peek-a-Boo! (North America  ver 1.0).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Ordyne/Ordyne (Japan, English Version).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Peek-a-Boo!/Peek-a-Boo! (North America, ver 1.0).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Phelios/Phelios (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Power Instinct/Gouketsuji Ichizoku (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Power Instinct/Gouketsuji Ichizoku (Japan, prototype).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Power Instinct/Power Instinct (USA, bootleg set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Power Instinct/Power Instinct (USA, bootleg set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Power Instinct/Power Instinct (USA, prototype).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Rapid Hero/Arcadia (NMK).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Rapid Hero/Rapid Hero (Media Trading).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Rolling Thunder 2/Rolling Thunder 2 (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Sand Scorpion/Kuai Da Shizi Huangdi (China  Revised Hardware).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Saboten Bombers/Cactus (bootleg of Saboten Bombers).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Saboten Bombers/Saboten Bombers (set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Sand Scorpion/Kuai Da Shizi Huangdi (China, Revised Hardware).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Sand Scorpion/Sand Scorpion (Earlier).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Steel Gunner 2/Steel Gunner 2 (Japan  Rev A).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Spectrum 2000/Fire Hawk (World) - Huohu Chuanshuo (China) (horizontal).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Spectrum 2000/Spectrum 2000 (horizontal, buggy) (Europe).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (China & Hong Kong).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (Excellent Co., Ltd).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (Korea).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (USA, Canada & South America).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (horizontal, Greece).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (horizontal, Italy).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (horizontal, Spain, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (horizontal, Spain, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Stagger I/Red Hawk (horizontal, bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Steel Gunner 2/Steel Gunner 2 (Japan, Rev A).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Steel Gunner/Steel Gunner (Japan).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Super Spacefortress Macross II/Macross II (Korea).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Super Spacefortress Macross II/Super Spacefortress Macross II - Chou-Jikuu Yousai Macross II (Gamest review build).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Super World Stadium '92/Super World Stadium '92 Gekitouban (Japan).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Suzuka 8 Hours 2/Suzuka 8 Hours 2 (Japan  Rev B).mra
-_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Suzuka 8 Hours/Suzuka 8 Hours (Japan  Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Suzuka 8 Hours 2/Suzuka 8 Hours 2 (Japan, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Suzuka 8 Hours/Suzuka 8 Hours (Japan, Rev B).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Task Force Harrier/Task Force Harrier (Lettering bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Task Force Harrier/Task Force Harrier (US).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon 2/Big Bang (9th Nov. 1993, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon 2/Big Bang (9th Nov. 1993, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon 2/Thunder Dragon 2 (1st Oct. 1993).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon 2/Thunder Dragon 2 (Mikejmoffitt Enhanced).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon 2/Thunder Dragon 3 (bootleg of Thunder Dragon 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon/Thunder Dragon (4th Jun. 1991, protected).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon/Thunder Dragon (bootleg with Raiden sounds, encrypted).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Thunder Dragon/Thunder Dragon (bootleg with Raiden sounds, unencrypted).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_US AAF Mustang/US AAF Mustang (25th May. 1990 - Seoul Trading).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_US AAF Mustang/US AAF Mustang (Lettering bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_US AAF Mustang/US AAF Mustang (TAB Austria bootleg).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_US AAF Mustang/US AAF Mustang (bootleg, set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Valkyrie no Densetsu/Valkyrie no Densetsu (English Translation by A-M).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 1).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 2).mra
+_Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (bootleg with PIC16c57).mra
 _Arcade/_Unofficial/_Meathax/Air Rescue (World).mra
 _Arcade/_Unofficial/_Meathax/Alien3 The Gun.mra
 _Arcade/_Unofficial/_Meathax/Appoooh.mra
@@ -187,7 +288,7 @@ _Arcade/_Unofficial/_Meathax/Hard Head.mra
 _Arcade/_Unofficial/_Meathax/Heavy Unit.mra
 _Arcade/_Unofficial/_Meathax/HeliFire.mra
 _Arcade/_Unofficial/_Meathax/Holosseum.mra
-_Arcade/_Unofficial/_Meathax/I  Robot.mra
+_Arcade/_Unofficial/_Meathax/I, Robot.mra
 _Arcade/_Unofficial/_Meathax/Ikki.mra
 _Arcade/_Unofficial/_Meathax/Indoor Soccer.mra
 _Arcade/_Unofficial/_Meathax/Jack Rabbit.mra
@@ -260,7 +361,7 @@ _Arcade/_Unofficial/_Meathax/Yellow Cab.mra
 _Arcade/_Unofficial/_Meathax/Zaviga.mra
 _Arcade/_Unofficial/_Meathax/Zero Team USA.mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Alien3 The Gun/Alien3 The Gun (Japan).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Alien3 The Gun/Alien3 The Gun (US  Rev A).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Alien3 The Gun/Alien3 The Gun (US, Rev A).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Arabian Fight/Arabian Fight (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Arabian Fight/Arabian Fight (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Burning Rival/Burning Rival (Japan).mra
@@ -270,19 +371,19 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Devastators/Devastators (ver. V).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Devastators/Devastators (ver. X).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Devastators/Garuka (Japan ver. W).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Do! Run Run/Super Pierrot.mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Escape Kids/Escape Kids (Japan  2 Players).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Escape Kids/Escape Kids (Japan, 2 Players).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Golden Axe The Revenge of Death Adder/Golden Axe The Revenge of Death Adder (Japan).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Golden Axe The Revenge of Death Adder/Golden Axe The Revenge of Death Adder (US  Rev A).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Golden Axe The Revenge of Death Adder/Golden Axe The Revenge of Death Adder (US, Rev A).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Hard Dunk/Hard Dunk (Japan).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan  alternate ROM format).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan  newer).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan  older).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan, alternate ROM format).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan, newer).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan, older).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Ikki/Farmers Rebellion.mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Indoor Soccer/American Soccer.mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan  Deluxe).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan  Rev A  Conversion).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan  Rev A  Deluxe).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, Deluxe).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, Rev A, Conversion).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, Rev A, Deluxe).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Kyros/Kyros no Yakata (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Metamorphic Force/Metamorphic Force (ver AAA).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Metamorphic Force/Metamorphic Force (ver EAA - alternate).mra
@@ -297,22 +398,22 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Rad Rally/Rad Rally (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_S.P.Y/S.P.Y. - Special Project Y. (US ver. M).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Slip Stream/Slip Stream (Hispanic 950515).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Spider-Man The Videogame/Spider-Man The Videogame (Japan).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Spider-Man The Videogame/Spider-Man The Videogame (US  Rev A).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Spider-Man The Videogame/Spider-Man The Videogame (US, Rev A).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Stadium Cross/Stadium Cross (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Super Visual Football European Sega Cup/Super Visual Soccer Sega Cup.mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Super Visual Football European Sega Cup/The J.League 1994 (Japan  Rev A).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Super Visual Football European Sega Cup/The J.League 1994 (Japan, Rev A).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Super Visual Football European Sega Cup/The J.League 1994.mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/Ring no Ohja (Japan 2 Players ver. N).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/The Main Event (2 Players ver. X).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/The Main Event (4 Players ver. F).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players Asia).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players Japan).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World  set 1).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World  set 2).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World  set 3).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World, set 1).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World, set 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World, set 3).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (4 Players Asia).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (4 Players World  set 2).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (4 Players World  set 3).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (4 Players World, set 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (4 Players World, set 3).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Title Fight/Title Fight (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Title Fight/Title Fight (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Violent Storm/Violent Storm (ver AAB).mra
@@ -321,15 +422,15 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Violent Storm/Violent Storm (ver EAB
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Violent Storm/Violent Storm (ver JAC).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Violent Storm/Violent Storm (ver UAB).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Violent Storm/Violent Storm (ver UAC).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan  earlier  set 1).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan  earlier  set 2).mra
-_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan  later batteryless).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan, earlier, set 1).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan, earlier, set 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan, later batteryless).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Korea).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Taiwan).mra
 _Arcade/_Unofficial/_XelaNotPu/1 on 1 Government (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Aero Fighters Special (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Battle Arena Toshinden 2 (USA).mra
-_Arcade/_Unofficial/_XelaNotPu/Bloody Roar (Japan  Jun 21 1997).mra
+_Arcade/_Unofficial/_XelaNotPu/Bloody Roar (Japan, Jun 21 1997).mra
 _Arcade/_Unofficial/_XelaNotPu/Bloody Roar 2 (World).mra
 _Arcade/_Unofficial/_XelaNotPu/Brave Blade (World).mra
 _Arcade/_Unofficial/_XelaNotPu/Break Thru (World).mra
@@ -337,8 +438,12 @@ _Arcade/_Unofficial/_XelaNotPu/Choukou Senki Kikaioh (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Dancing Eyes (DC2-VER.B).mra
 _Arcade/_Unofficial/_XelaNotPu/Dead or Alive ++ (Japan USA Export).mra
 _Arcade/_Unofficial/_XelaNotPu/Dunk Mania (DM2-VER.C).mra
+_Arcade/_Unofficial/_XelaNotPu/Fighters Impact A (Ver 2.00J).mra
+_Arcade/_Unofficial/_XelaNotPu/Fighters' Impact (Ver 2.02A).mra
+_Arcade/_Unofficial/_XelaNotPu/Fighters' Impact (Ver 2.02O).mra
 _Arcade/_Unofficial/_XelaNotPu/Final Lap R (Rev. B).mra
 _Arcade/_Unofficial/_XelaNotPu/Flame Gunner (Export).mra
+_Arcade/_Unofficial/_XelaNotPu/G-Darius (Ver 2.02O).mra
 _Arcade/_Unofficial/_XelaNotPu/G-Darius Ver.2 (Ver 2.03J).mra
 _Arcade/_Unofficial/_XelaNotPu/Gallop Racer 2 (Export).mra
 _Arcade/_Unofficial/_XelaNotPu/Gallop Racer 3 (Export).mra
@@ -380,9 +485,9 @@ _Arcade/_Unofficial/_XelaNotPu/Tondemo Crisis (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Xevious 3D-G (XV32-VER.B).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Aero Fighters Special/Aero Fighters Special (Taiwan).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (Europe).mra
-_Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (Japan  32Mb mask ROMs).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (USA  32Mb mask ROMs).mra
+_Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (Japan, 32Mb mask ROMs).mra
+_Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Battle Arena Toshinden 2/Battle Arena Toshinden 2 (USA, 32Mb mask ROMs).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Bloody Roar 2/Bloody Roar 2 (Asia).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Bloody Roar 2/Bloody Roar 2 (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Bloody Roar 2/Bloody Roar 2 (USA).mra
@@ -468,6 +573,73 @@ _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Tekken/Tekken (Japan TE1 Ver.B).mr
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Tekken/Tekken (World TE2 Ver.B).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Xevious 3D-G/Xevious 3D-G (Japan XV31-VER.A).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Xevious 3D-G/Xevious 3D-G (World XV32-VER.A).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm Boogie Wings (Asia v1.5, 92.12.07).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm Boogie Wings (USA v1.7, 92.12.14).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm The Great Ragtime Show (Japan v1.3, 92.11.26).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm The Great Ragtime Show (Japan v1.5, 92.12.07).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Night Slashers/rm Night Slashers (Japan Rev 1.2, DE-0397-0 PCB).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Night Slashers/rm Night Slashers (Over Sea Rev 1.2, DE-0397-0 PCB).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Night Slashers/rm Night Slashers (US Rev 1.2, DE-0395-1 PCB).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Raiden/rm Raiden (Japan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Raiden/rm Raiden (Korea).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Raiden/rm Raiden (Taiwan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Raiden/rm Raiden (US).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_Raiden/rm Raiden (World set 2, newer hardware).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Asuka & Asuka/rm Asuka & Asuka (Japan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Asuka & Asuka/rm Asuka & Asuka (Japan, rev 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Bonze Adventure (US, rev 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Bonze Adventure (World).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Bonze Adventure (World, prototype, newer).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Bonze Adventure (World, prototype, older).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Jigoku Meguri (Japan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Bonze Adventure/rm Jigoku Meguri (Japan, rev 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (France).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Germany, oldest).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Germany, version 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Italy).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Japan, oldest).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Japan, version 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Japan, version 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Prototype).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Spain, oldest).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (Spain, version 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (US, version 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (US, version 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (World) LINK MASTER.mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cadash/rm Cadash (World) LINK SLAVE.mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cosmo Police Galivan/rm Cosmo Police Galivan (12-11-1985).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Cosmo Police Galivan/rm Cosmo Police Galivan (12-16-1985).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ninja Emaki/rm Ninja Emaki (Tecfri license).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ninja Emaki/rm Youma Ninpou Chou (Game Electronics bootleg, set 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ninja Emaki/rm Youma Ninpou Chou (Game Electronics bootleg, set 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ninja Emaki/rm Youma Ninpou Chou (Japan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ninja Emaki/rm Youma Ninpou Chou (Japan, alt).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Seibu Cup Soccer/rm Olympic Soccer '92 (set 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Seibu Cup Soccer/rm Olympic Soccer '92 (set 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Seibu Cup Soccer/rm Olympic Soccer '92 (set 3).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Seibu Cup Soccer/rm Seibu Cup Soccer (set 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Seibu Cup Soccer/rm Seibu Cup Soccer (set 3).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm U.N. Defense Force - Earth Joker/rm U.N. Defense Force - Earth Joker (Japan, prototype).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm U.N. Defense Force - Earth Joker/rm U.N. Defense Force - Earth Joker (US-Japan, set 2).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm U.N. Defense Force - Earth Joker/rm U.N. Defense Force - Earth Joker (US-Japan, set 3).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ufo Robo Dangar/rm Ufo Robo Dangar (12-1-1986).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ufo Robo Dangar/rm Ufo Robo Dangar (9-26-1986, Japan).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ufo Robo Dangar/rm Ufo Robo Dangar (9-26-1986, bootleg set 1).mra
+_Arcade/_Unofficial/_rmonic79/_Alternatives/_rm Ufo Robo Dangar/rm Ufo Robo Dangar (9-26-1986, bootleg set 2).mra
+_Arcade/_Unofficial/_rmonic79/rm Asuka & Asuka (World).mra
+_Arcade/_Unofficial/_rmonic79/rm Bonze Adventure (World, rev 1).mra
+_Arcade/_Unofficial/_rmonic79/rm Boogie Wings (Euro v1.5, 92.12.07).mra
+_Arcade/_Unofficial/_rmonic79/rm Cadash (World).mra
+_Arcade/_Unofficial/_rmonic79/rm Cosmo Police Galivan (12-26-1985).mra
+_Arcade/_Unofficial/_rmonic79/rm Galmedes (Japan).mra
+_Arcade/_Unofficial/_rmonic79/rm Kokontouzai Eto Monogatari (Japan).mra
+_Arcade/_Unofficial/_rmonic79/rm Maze of Flott (Japan).mra
+_Arcade/_Unofficial/_rmonic79/rm Night Slashers (Korea Rev 1.3, DE-0397-0 PCB).mra
+_Arcade/_Unofficial/_rmonic79/rm Ninja Emaki (US).mra
+_Arcade/_Unofficial/_rmonic79/rm Raiden (World).mra
+_Arcade/_Unofficial/_rmonic79/rm Seibu Cup Soccer (set 1).mra
+_Arcade/_Unofficial/_rmonic79/rm U.N. Defense Force - Earth Joker (US-Japan, set 1).mra
+_Arcade/_Unofficial/_rmonic79/rm Ufo Robo Dangar (4-09-1987).mra
 config/nvram/RevX_09132026.nvm
 config/nvram/Revolution X [blahm1d].nvm
 config/nvram/Revolution X.nvm
