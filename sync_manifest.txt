@@ -327,58 +327,32 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Japan  later ba
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Korea).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Zero Team/Zero Team (Taiwan).mra
 _Arcade/_Unofficial/_XelaNotPu/1 on 1 Government (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/Aero Fighters Special (Taiwan).mra
 _Arcade/_Unofficial/_XelaNotPu/Aero Fighters Special (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Battle Arena Toshinden 2 (USA).mra
-_Arcade/_Unofficial/_XelaNotPu/Beastorizer (USA).mra
-_Arcade/_Unofficial/_XelaNotPu/Beastorizer USA (Jun 21 1997).mra
 _Arcade/_Unofficial/_XelaNotPu/Bloody Roar (Japan  Jun 21 1997).mra
-_Arcade/_Unofficial/_XelaNotPu/Bloody Roar 2 (Asia).mra
-_Arcade/_Unofficial/_XelaNotPu/Bloody Roar 2 (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/Bloody Roar 2 (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Bloody Roar 2 (World).mra
-_Arcade/_Unofficial/_XelaNotPu/Brave Blade (Asia).mra
-_Arcade/_Unofficial/_XelaNotPu/Brave Blade (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/Brave Blade (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Brave Blade (World).mra
 _Arcade/_Unofficial/_XelaNotPu/Break Thru (World).mra
 _Arcade/_Unofficial/_XelaNotPu/Choukou Senki Kikaioh (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Dancing Eyes (DC2-VER.B).mra
 _Arcade/_Unofficial/_XelaNotPu/Dead or Alive ++ (Japan USA Export).mra
-_Arcade/_Unofficial/_XelaNotPu/Dead or Alive ++ (Korea).mra
 _Arcade/_Unofficial/_XelaNotPu/Dunk Mania (DM2-VER.C).mra
-_Arcade/_Unofficial/_XelaNotPu/Fighters Impact A (Ver 2.00J).mra
-_Arcade/_Unofficial/_XelaNotPu/Fighters' Impact (Ver 2.02A).mra
-_Arcade/_Unofficial/_XelaNotPu/Fighters' Impact (Ver 2.02J).mra
-_Arcade/_Unofficial/_XelaNotPu/Fighters' Impact (Ver 2.02O).mra
 _Arcade/_Unofficial/_XelaNotPu/Final Lap R (Rev. B).mra
 _Arcade/_Unofficial/_XelaNotPu/Flame Gunner (Export).mra
-_Arcade/_Unofficial/_XelaNotPu/Flame Gunner (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/G-Darius (Ver 2.01J).mra
-_Arcade/_Unofficial/_XelaNotPu/G-Darius (Ver 2.02A).mra
-_Arcade/_Unofficial/_XelaNotPu/G-Darius (Ver 2.02O).mra
 _Arcade/_Unofficial/_XelaNotPu/G-Darius Ver.2 (Ver 2.03J).mra
 _Arcade/_Unofficial/_XelaNotPu/Gallop Racer 2 (Export).mra
-_Arcade/_Unofficial/_XelaNotPu/Gallop Racer 2 (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Gallop Racer 3 (Export).mra
-_Arcade/_Unofficial/_XelaNotPu/Gallop Racer 3 (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Gallop Racer.mra
 _Arcade/_Unofficial/_XelaNotPu/Heaven's Gate.mra
 _Arcade/_Unofficial/_XelaNotPu/Kosodate Quiz My Angel 3 (KQT1-VER.A).mra
 _Arcade/_Unofficial/_XelaNotPu/Logic Pro Adventure (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Magical Date (Ver 2.02J).mra
-_Arcade/_Unofficial/_XelaNotPu/Magical Date EX (Ver 2.01J).mra
 _Arcade/_Unofficial/_XelaNotPu/Monster Farm Jump (Japan).mra
 _Arcade/_Unofficial/_XelaNotPu/Plasma Sword - Nightmare of Bilstein (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Pocket Racer (Japan PKR1-VER.B).mra
 _Arcade/_Unofficial/_XelaNotPu/Point Blank 2 (World GNB2-VER.A).mra
 _Arcade/_Unofficial/_XelaNotPu/Prime Goal EX (PG1-VER.A).mra
-_Arcade/_Unofficial/_XelaNotPu/Psychic Force (Ver 2.4J).mra
 _Arcade/_Unofficial/_XelaNotPu/Psychic Force (Ver 2.4O).mra
-_Arcade/_Unofficial/_XelaNotPu/Psychic Force EX (Ver 2.0J).mra
-_Arcade/_Unofficial/_XelaNotPu/Ray Storm (Ver 2.05A).mra
-_Arcade/_Unofficial/_XelaNotPu/Ray Storm (Ver 2.05J).mra
-_Arcade/_Unofficial/_XelaNotPu/Ray Storm (Ver 2.05O).mra
 _Arcade/_Unofficial/_XelaNotPu/Ray Storm (Ver 2.06A).mra
 _Arcade/_Unofficial/_XelaNotPu/Rival Schools - United By Fate (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Shanghai Matekibuyuu (Japan).mra
@@ -395,9 +369,6 @@ _Arcade/_Unofficial/_XelaNotPu/Street Fighter EX2 (USA 980526).mra
 _Arcade/_Unofficial/_XelaNotPu/Street Fighter EX2 Plus (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Strider 2 (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Strider Hiryu 2 (Japan).mra
-_Arcade/_Unofficial/_XelaNotPu/Super Football Champ (Ver 2.4A).mra
-_Arcade/_Unofficial/_XelaNotPu/Super Football Champ (Ver 2.4J).mra
-_Arcade/_Unofficial/_XelaNotPu/Super Football Champ (Ver 2.4O).mra
 _Arcade/_Unofficial/_XelaNotPu/Super Football Champ (Ver 2.5O).mra
 _Arcade/_Unofficial/_XelaNotPu/Tech Romancer (USA).mra
 _Arcade/_Unofficial/_XelaNotPu/Tecmo World Cup Millennium (Japan).mra
