@@ -29,7 +29,14 @@ jobs:
             "meathax/meatcores/main:Meathax"
             "blahm1d/MiSTer-cores/main:Blahm1d"
             "Gm0rk/Arcade-Atari-G1_MiSTer/main:Gm0rk"
-            "XelaNotPu/Arcade-Atari-G1_MiSTer/main:XelaNotPu"
+            "XelaNotPu/BreakThru_MiSTer/main:XelaNotPu"
+            "XelaNotPu/ZN1_MiSTer/main:XelaNotPu"
+            "XelaNotPu/ZN1-TaitoFX1B_MiSTer/main:XelaNotPu"
+            "XelaNotPu/SYSTEM12_MiSTer/main:XelaNotPu"
+            "XelaNotPu/ZN1-Capcom_MiSTer/main:XelaNotPu"
+            "XelaNotPu/ZN2-Capcom_MiSTer/main:XelaNotPu"
+            "XelaNotPu/SYSTEM11_MiSTer-Supporter/main:XelaNotPu"
+            "XelaNotPu/SYSTEMFL_MiSTer-Supporter/main:XelaNotPu"
           )
 
           > external_files.csv
