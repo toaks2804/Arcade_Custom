@@ -6,14 +6,20 @@ on:
       - main
   workflow_dispatch:
 
-permissions: write-all
+permissions:
+  contents: write
 
 jobs:
   build_db:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build Custom Database for MiSTer Downloader
-      run: set -o pipefail && curl --fail --location https://raw.githubusercontent.com/theypsilon/Downloader_DB-Template_MiSTer/main/.github/build_db.py | python3 -
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Custom Database for MiSTer Downloader
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 \
+            https://raw.githubusercontent.com/theypsilon/DB-Template_MiSTer/a4f7c6d53c608fda156de9df4bc72b876a299d1b/.github/build_db.py \
+            | python3 -
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
