@@ -26,11 +26,11 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "blahm1d/blahm1d-cores/main:Blahm1d"
+            "blahm1d/MiST-cores/main:Blahm1d"
           )
 
           > external_files.csv
-          > /tmp/mra_files.txt
+          > /tmp/download_files.txt
 
           for entry in "${DEVS[@]}"; do
             IFS=':' read -r repo_spec target_folder <<< "$entry"
@@ -38,7 +38,7 @@ jobs:
 
             # --- Part 1: Scan repo tree ---
             # .rbf files -> external_files.csv (downloaded on demand by user)
-            # .mra files -> downloaded into this repo (tiny, needed for metadata)
+            # .mra and .nvm files -> downloaded into this repo (small, needed locally)
             curl -s \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: token $GITHUB_TOKEN" \
@@ -52,7 +52,7 @@ jobs:
           owner, repo, branch = '$owner', '$repo', '$branch'
           target_folder = '$target_folder'
           lines = []
-          mra_files = []
+          download_files = []
           for item in tree:
               if item['type'] != 'blob':
                   continue
@@ -62,7 +62,7 @@ jobs:
               if path.endswith('.rbf'):
                   filename = path.split('/')[-1].replace(',', ' ')
                   lines.append(f'_Arcade/cores/{filename},{url}')
-              elif path.endswith('.mra'):
+              elif path.endswith('.mra') or path.endswith('.nvm'):
                   stripped = safe_path
                   if stripped.startswith('_Arcade/'):
                       stripped = stripped[len('_Arcade/'):]
@@ -72,11 +72,14 @@ jobs:
                           stripped = stripped.split('/', 1)[1]
                   if stripped.startswith('releases/'):
                       stripped = stripped[len('releases/'):]
-                  local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
-                  mra_files.append((local_path, url))
+                  if stripped.startswith('config/'):
+                      local_path = stripped
+                  else:
+                      local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
+                  download_files.append((local_path, url))
           print('\n'.join(lines))
-          with open('/tmp/mra_files.txt', 'a') as f:
-              for local_path, url in mra_files:
+          with open('/tmp/download_files.txt', 'a') as f:
+              for local_path, url in download_files:
                   f.write(f'{local_path}|{url}\n')
           " >> external_files.csv
 
@@ -112,13 +115,13 @@ jobs:
           " >> external_files.csv
           done
 
-          # --- Download all .mra files into the repo ---
-          if [ -f /tmp/mra_files.txt ]; then
+          # --- Download all .mra and .nvm files into the repo ---
+          if [ -f /tmp/download_files.txt ]; then
             while IFS='|' read -r local_path url; do
               [ -z "$local_path" ] && continue
               mkdir -p "$(dirname "$local_path")"
               curl -sL -o "$local_path" "$url"
-            done < /tmp/mra_files.txt
+            done < /tmp/download_files.txt
           fi
 
           if [ -f manual_external_files.csv ]; then
@@ -213,9 +216,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add external_files.csv
           git add _Arcade/
+          git add config/
           if git diff --cached --quiet; then
             echo "No changes to sync."
           else
-            git commit -m "Sync: updated external_files.csv and .mra files"
+            git commit -m "Sync: updated external_files.csv and core files"
             git push
           fi   
