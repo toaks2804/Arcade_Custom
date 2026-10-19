@@ -134,6 +134,8 @@ jobs:
 
           ARCHIVE_BASE = "https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29"
           ARCHIVE_API = "https://archive.org/metadata/mame-roms-merged_/files/MAME%20ROMs%20%28merged%29"
+          ONGO_ID = "OngoFiles"
+          ONGO_BASE = f"https://archive.org/download/{ONGO_ID}"
 
           existing = set()
           with open('external_files.csv') as f:
@@ -182,19 +184,38 @@ jobs:
           with open('missing_roms.csv', 'w') as f:
               pass
 
-          # Track all known ROMs (existing + newly found) for child detection
           found_roms = set()
           for path in existing:
               if path.startswith('games/mame/') and path.endswith('.zip'):
                   found_roms.add(path[len('games/mame/'):-4])
+
+          # Fetch OngoFiles full file list once (handles any subdirectory)
+          print("Fetching OngoFiles collection list...")
+          ongoing_file_map = {}
+          try:
+              with urlopen(f"https://archive.org/metadata/{ONGO_ID}/files", timeout=30) as resp:
+                  data = json.loads(resp.read())
+              result = data.get('result', [])
+              for item in result:
+                  name = item.get('name', '')
+                  if name.endswith('.zip'):
+                      ongoing_file_map[name.lower()] = (item.get('size'), item.get('md5'), name)
+              print(f"  Loaded {len(ongoing_file_map)} .zip files from OngoFiles.")
+          except Exception as e:
+              print(f"  WARN: Could not fetch OngoFiles list: {e}")
 
           ia_cache = {}
           added = 0
           failed = 0
 
           for rom in new_roms:
+              size, md5, url = None, None, None
+
+              # Primary: direct API lookup in mame-roms-merged_
               if rom in ia_cache:
                   size, md5 = ia_cache[rom]
+                  if size:
+                      url = f"{ARCHIVE_BASE}/{quote(rom)}"
               else:
                   api_url = f"{ARCHIVE_API}/{quote(rom)}"
                   try:
@@ -204,12 +225,22 @@ jobs:
                       size = result.get('size')
                       md5 = result.get('md5')
                       ia_cache[rom] = (size, md5)
+                      if size:
+                          url = f"{ARCHIVE_BASE}/{quote(rom)}"
                   except Exception:
                       size, md5 = None, None
+                      ia_cache[rom] = (None, None)
                   time.sleep(0.1)
 
+              # Secondary: search OngoFiles full list
+              if not size:
+                  entry = ongoing_file_map.get(rom.lower())
+                  if entry:
+                      size, md5, full_path = entry
+                      url = f"{ONGO_BASE}/{quote(full_path)}"
+                      print(f"    (found in OngoFiles: {full_path})")
+
               if size and md5:
-                  url = f"{ARCHIVE_BASE}/{quote(rom)}"
                   with open('external_files.csv', 'a') as f:
                       f.write(f"games/mame/{rom},{url},{size},{md5}\n")
                   added += 1
@@ -228,7 +259,7 @@ jobs:
                       failed += 1
                       with open('missing_roms.csv', 'a') as f:
                           f.write(f"{rom}\n")
-                      print(f"  ! {rom} (not found on archive.org)")
+                      print(f"  ! {rom} (not found)")
 
           print(f"\nAdded {added} ROMs, {failed} missing.")
 
