@@ -112,6 +112,11 @@ jobs:
                   ext = source.lower().rsplit(".", 1)[-1] if "." in source else ""
                   if ext not in {"mra", "rbf", "nvm"}:
                       continue
+                  # source/mra is a flattened build/source mirror in some XelaNotPu
+                  # repositories. It loses the upstream _alternatives/_Gamename
+                  # grouping, so only use the canonical release/_Arcade MRA tree.
+                  if ext == "mra" and "/source/mra/" in ("/" + source.lower() + "/"):
+                      continue
                   url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quote(source, safe='/')}"
                   kind = ext
                   dest = destination(source, kind, dev)
