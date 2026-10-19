@@ -27,7 +27,7 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "blahm1d/blahm1d-cores/main:Blahm1d"
+            "blahm1d/MiSTer-cores/main:Blahm1d"
           )
 
           > external_files.csv
