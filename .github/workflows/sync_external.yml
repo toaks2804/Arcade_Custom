@@ -28,14 +28,12 @@ jobs:
             "meathax/meatcores/main:Meathax"
           )
 
-          # Start fresh
           > external_files.csv
 
           for entry in "${DEVS[@]}"; do
             IFS=':' read -r repo_spec target_folder <<< "$entry"
             IFS='/' read -r owner repo branch <<< "$repo_spec"
 
-            # --- Part 1: Scan repo tree for .rbf and .mra files ---
             curl -s \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: token $GITHUB_TOKEN" \
@@ -65,13 +63,11 @@ jobs:
           print('\n'.join(lines))
           " >> external_files.csv
 
-            # --- Part 2: Pull .zip ROMs from dev's external_files.csv ---
             curl -s \
               -H "Authorization: token $GITHUB_TOKEN" \
               "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
               | python3 -c "
           import sys, re
-          from urllib.parse import quote
 
           url_pattern = re.compile(r'^https?://')
 
@@ -98,10 +94,91 @@ jobs:
           " >> external_files.csv
           done
 
-          # Append manual entries if the file exists
           if [ -f manual_external_files.csv ]; then
             cat manual_external_files.csv >> external_files.csv
           fi
+
+      - name: Enrich missing hashes and sizes
+        run: |
+          python3 << 'EOF'
+          import json, os, sys, time, hashlib, tempfile
+          from urllib.parse import quote, urlparse
+          from urllib.request import urlopen
+
+          def get_ia_metadata(url):
+              parsed = urlparse(url)
+              parts = parsed.path.split('/', 2)
+              if len(parts) < 3:
+                  return None, None
+              remainder = parts[2]
+              if '/' not in remainder:
+                  return None, None
+              idx = remainder.index('/')
+              identifier = remainder[:idx]
+              file_path = remainder[idx+1:]
+              api_url = f"https://archive.org/metadata/{identifier}/files/{quote(file_path, safe='/')}"
+              try:
+                  with urlopen(api_url, timeout=10) as resp:
+                      data = json.loads(resp.read())
+                  result = data.get('result', {})
+                  return result.get('size'), result.get('md5')
+              except Exception:
+                  return None, None
+
+          def get_file_metadata(url):
+              try:
+                  tmp = tempfile.NamedTemporaryFile(delete=False)
+                  with urlopen(url, timeout=30) as resp:
+                      while True:
+                          chunk = resp.read(65536)
+                          if not chunk:
+                              break
+                          tmp.write(chunk)
+                  tmp.close()
+                  with open(tmp.name, 'rb') as f:
+                      data = f.read()
+                  os.unlink(tmp.name)
+                  return str(len(data)), hashlib.md5(data).hexdigest()
+              except Exception:
+                  return None, None
+
+          infile = 'external_files.csv'
+          out_lines = []
+          enriched = 0
+          failed = 0
+
+          with open(infile) as f:
+              for line in f:
+                  line = line.rstrip('\n')
+                  if not line or line.startswith('#'):
+                      out_lines.append(line)
+                      continue
+                  parts = line.split(',')
+                  if len(parts) >= 4 and parts[2] and parts[3]:
+                      out_lines.append(line)
+                      continue
+                  if len(parts) < 2:
+                      out_lines.append(line)
+                      continue
+                  path, url = parts[0], parts[1]
+                  size, md5 = None, None
+                  if 'archive.org' in url:
+                      size, md5 = get_ia_metadata(url)
+                      time.sleep(0.2)
+                  if not size:
+                      size, md5 = get_file_metadata(url)
+                  if size and md5:
+                      out_lines.append(f"{path},{url},{size},{md5}")
+                      enriched += 1
+                  else:
+                      out_lines.append(line)
+                      failed += 1
+
+          with open(infile, 'w') as f:
+              f.write('\n'.join(out_lines) + '\n')
+
+          print(f"Enriched {enriched} entries, {failed} failed.")
+          EOF
 
       - name: Commit changes if any
         run: |
