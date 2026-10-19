@@ -177,7 +177,7 @@ jobs:
               if version < latest_rbf[core]:
                   latest_date, latest_revision = latest_rbf[core]
                   latest_suffix = latest_date + latest_revision
-                  print(f"Skipping older RBF release {dest}; newest is {core}_{latest_suffix}.rbf")
+                  print(f"Skipping older RBF release {dest}; newest dated suffix is {latest_suffix}.rbf")
                   del candidates[dest]
           for dest, options in list(candidates.items()):
               if options[0][5] != "rbf":
@@ -186,11 +186,12 @@ jobs:
               if dated_rbf.match(filename):
                   continue
               stem = filename[:-4] if filename.lower().endswith(".rbf") else filename
-              core = stem.casefold()
+              destination_group = "_console" if dest.startswith("_Console/") else "_arcade"
+              core = (destination_group, stem.casefold())
               if core in latest_rbf:
                   latest_date, latest_revision = latest_rbf[core]
                   latest_suffix = latest_date + latest_revision
-                  print(f"Skipping undated RBF {dest}; dated release {stem}_{latest_suffix}.rbf exists")
+                  print(f"Skipping undated RBF {dest}; a dated release with suffix {latest_suffix}.rbf exists")
                   del candidates[dest]
           print(f"Selected newest dated RBF releases for {len(latest_rbf)} cores.")
 
