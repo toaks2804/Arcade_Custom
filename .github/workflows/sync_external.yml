@@ -133,7 +133,7 @@ jobs:
           from urllib.request import urlopen
 
           ARCHIVE_BASE = "https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29"
-          ARCHIVE_API = "https://archive.org/metadata/mame-roms-merged_/files"
+          ARCHIVE_API = "https://archive.org/metadata/mame-roms-merged_/files/MAME%20ROMs%20%28merged%29"
 
           existing = set()
           with open('external_files.csv') as f:
@@ -208,6 +208,24 @@ jobs:
                   print(f"  ! {rom} (not found on archive.org)")
 
           print(f"\nAdded {added} ROMs, {failed} missing.")
+
+          # Dedup: keep first occurrence of each local path
+          seen = set()
+          deduped = []
+          with open('external_files.csv') as f:
+              for line in f:
+                  line = line.rstrip('\n')
+                  if not line or line.startswith('#'):
+                      deduped.append(line)
+                      continue
+                  key = line.split(',')[0].lower()
+                  if key not in seen:
+                      seen.add(key)
+                      deduped.append(line)
+                  else:
+                      print(f"  (dedup: {key})")
+          with open('external_files.csv', 'w') as f:
+              f.write('\n'.join(deduped) + '\n')
           EOF
 
       - name: Enrich missing hashes and sizes
