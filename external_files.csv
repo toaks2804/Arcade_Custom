@@ -21,8 +21,9 @@ _Arcade/cores/Arcade-DataEastLiberation_20261016.rbf,https://raw.githubuserconte
 _Arcade/cores/Arcade-DoCastle_20260802.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-DoCastle_20260802.rbf,3530804,7427bf59f9a69b30ba58347053dbe272
 _Arcade/cores/Arcade-DrMicro_20260907.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-DrMicro_20260907.rbf,2943624,1b684ef5652fbae41abfb69f3817d39f
 _Arcade/cores/Arcade-EscapeKids_20260903.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-EscapeKids_20260903.rbf,3146664,ef3a934cd9fc4547e8f4a94539a48002
+_Arcade/cores/Arcade-Exterminator_20261019b.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Exterminator_20261019b.rbf,4043800,32c8959b2d80a75e4843b2679adf97a6
 _Arcade/cores/Arcade-HeavyUnit_20261015.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-HeavyUnit_20261015.rbf,3399044,e234b9c9805ecb9cb436279442340b2b
-_Arcade/cores/Arcade-I-Robot_20260912.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-I-Robot_20260912.rbf,3525252,a6f5c9215c0a6add41ee5826da1f48af
+_Arcade/cores/Arcade-I-Robot_20261019.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-I-Robot_20261019.rbf,3560660,f2b889c980a6e9406d52785f7a2ae4e0
 _Arcade/cores/Arcade-IkkiSunsoft.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-IkkiSunsoft.rbf,3307648,e597666f82567c06099164a2bbaf54bc
 _Arcade/cores/Arcade-MCR68_20260915.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MCR68_20260915.rbf,3653892,d4f355a8e4ca379e6387d0d8356cf337
 _Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,4303020,d47721c194a68e6572cd7ef760ec7a1b
@@ -30,7 +31,7 @@ _Arcade/cores/Arcade-MysteriousStones_20261014.rbf,https://raw.githubusercontent
 _Arcade/cores/Arcade-NARC_20260801.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-NARC_20260801.rbf,4223588,bba1af65a2b813010691be704c616e78
 _Arcade/cores/Arcade-NamcoND1_20260930.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-NamcoND1_20260930.rbf,3272744,2d02e94bb4e17ede48372b4b016cbb15
 _Arcade/cores/Arcade-Nintendo8080_20261012.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Nintendo8080_20261012.rbf,3014292,5b6c643effc192abb48e45545921aca0
-_Arcade/cores/Arcade-PWB351024A.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-PWB351024A.rbf,3568972,f50a50032897c68e41e38db30dedb9fc
+_Arcade/cores/Arcade-PWB351024A.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-PWB351024A.rbf,3593044,4388e969ebad81c7099ed2882c41bd89
 _Arcade/cores/Arcade-Primal2.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Primal2.rbf,3754860,006198e076252a286270d0ce21e1aa6e
 _Arcade/cores/Arcade-SPY_20261015.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-SPY_20261015.rbf,3752228,fbc46e4e5168333ab07ca1880b96c3f5
 _Arcade/cores/Arcade-SSV_20261016.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-SSV_20261016.rbf,4477924,15e97f8d5ff7b5769d1b59b5e4042ada
@@ -157,6 +158,7 @@ games/mame/devstors.zip,https://archive.org/download/mame-roms-merged_/MAME%20RO
 games/mame/mainevt.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/mainevt.zip,1468235,ebd74abaf0da40d2654bdc59075ad503
 games/mame/arbalest.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/arbalest.zip,2099871,6d123edc111d55a78d79cd68e06ab05f
 games/mame/metafox.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/metafox.zip,2179349,b4933445cf5956fb044c2647e61ad60f
+games/mame/exterm.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/exterm.zip,941767,c70880dbc76aaf4428ecdab0775a1a97
 
 games/mame/64street.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/64street.zip,1512473,92ffcc2ce38cc9fb2b9131cbc0115796
 games/mame/acrobatm.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/acrobatm.zip,2178082,a1b03e77dda773dd5e10a39e73abe5a9
