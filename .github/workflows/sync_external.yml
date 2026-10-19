@@ -73,6 +73,11 @@ jobs:
           def destination(path, kind, dev):
               filename = path.rsplit("/", 1)[-1]
               if kind == "rbf":
+                  # Route to the console destination only when the upstream source
+                  # path contains a folder named _Console (case-insensitive).
+                  source_parts = path.replace("\\", "/").split("/")
+                  if any(part.casefold() == "_console" for part in source_parts[:-1]):
+                      return f"_Console/{filename}"
                   return f"_Arcade/cores/{filename}"
               if kind == "nvm":
                   return f"config/nvram/{filename}"
@@ -157,7 +162,10 @@ jobs:
               match = dated_rbf.match(filename)
               if not match:
                   continue
-              core = match.group("core").casefold()
+              # Keep arcade and console release histories independent even if a
+              # developer happens to use the same core filename in both places.
+              destination_group = "_console" if dest.startswith("_Console/") else "_arcade"
+              core = (destination_group, match.group("core").casefold())
               version = (match.group("date"), match.group("revision").casefold())
               parsed_rbf[dest] = (core, version)
               if core not in latest_rbf or version > latest_rbf[core]:
@@ -485,6 +493,7 @@ jobs:
           git add sync_manifest.txt
           git add missing_roms.csv 2>/dev/null || true
           git add _Arcade/ 2>/dev/null || true
+          git add _Console/ 2>/dev/null || true
           git add config/ 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to sync. Skipping build_db."
