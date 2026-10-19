@@ -27,7 +27,7 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "blahm1d/MiSTer-cores/main:Blahm1d"
+            "blahm1d/blahm1d-cores/main:Blahm1d"
           )
 
           > external_files.csv
@@ -152,6 +152,13 @@ jobs:
                       try:
                           tree = ET.parse(mra_path)
                           root_elem = tree.getroot()
+                          parent_elem = root_elem.find('parent')
+                          setname_elem = root_elem.find('setname')
+                          if parent_elem is not None and parent_elem.text:
+                              parent_name = parent_elem.text.strip()
+                              setname = setname_elem.text.strip() if setname_elem is not None and setname_elem.text else ''
+                              if parent_name != setname:
+                                  continue
                           for rom_elem in root_elem.iter('rom'):
                               zip_attr = rom_elem.get('zip')
                               if zip_attr:
@@ -209,7 +216,6 @@ jobs:
 
           print(f"\nAdded {added} ROMs, {failed} missing.")
 
-          # Dedup: keep first occurrence of each local path
           seen = set()
           deduped = []
           with open('external_files.csv') as f:
