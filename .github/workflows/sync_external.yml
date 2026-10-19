@@ -52,11 +52,12 @@ jobs:
                   continue
               path = item['path']
               url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quote(path, safe=\"/\")}'
+              safe_path = path.replace(',', ' ')
               if path.endswith('.rbf'):
-                  filename = path.split('/')[-1]
+                  filename = path.split('/')[-1].replace(',', ' ')
                   lines.append(f'_Arcade/cores/{filename},{url}')
               elif path.endswith('.mra'):
-                  stripped = path
+                  stripped = safe_path
                   if stripped.startswith('_Arcade/'):
                       stripped = stripped[len('_Arcade/'):]
                   lines.append(f'_Arcade/Unofficial/{target_folder}/{stripped},{url}')
