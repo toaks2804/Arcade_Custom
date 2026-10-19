@@ -1,77 +1,46 @@
-# Custom Database Template for the MiSTer Downloader
+# Arcade Custom MiSTer Downloader Database
 
-By following these instructions, you'll create your own [Custom Database for the MiSTer Downloader](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/custom-databases.md). This database can be integrated in MiSTer FPGA by just adding your own drop-in database file at the root of the SD.
+This repository builds and publishes a custom [MiSTer Downloader database](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/custom-databases.md) for unofficial arcade cores and related files.
 
-Once your database is up, adding files to it is very simple. You'll only have to upload files to your repository on GitHub, and after that, your users will fetch these files directly in their devices, by just running *update* or *update_all*.
+## Install the database
 
-## How to generate your own Custom Database for the MiSTer Downloader:
-1. Make sure you are logged in into your GitHub account. Or register a new account if you don't have any yet.
-2. Then click on
-    <a style="margin-top:100px;" href="https://github.com/theypsilon/DB-Template_MiSTer/generate">
-        <img src="https://img.shields.io/badge/Use_this_template-2ea44f" 
-            alt="Use this template"
-            title="Create repository from this template"></a>
-button to create your own public Custom Database repository on GitHub.
-3. After less than 5 minutes, you're database file will be generated at `https://raw.githubusercontent.com/<YOUR GITHUB USER>/<YOUR GITHUB REPOSITORY>/db/db.json.zip` (replacing the <> fields accordingly) and will be ready to be used. For example, if your GitHub user is `jose` and your repository name is `game_wallpapers`, the url will be: `https://raw.githubusercontent.com/jose/game_wallpapers/db/db.json.zip`
-4. To integrate it in a MiSTer device, download the following file: `https://raw.githubusercontent.com/<YOUR GITHUB USER>/<YOUR GITHUB REPOSITORY>/db/downloader_<YOUR GITHUB USER>_<YOUR GITHUB REPOSITORY>.zip`.
-Then extract the `.ini` file from it and place it in the root of the SD card.
-5. After that, run *update* or *update_all* as usual. It will try to fetch the files from your newly created database. If your database is still empty -which is your case if you followed these instructions-, obviously it won't download any file yet, but it will show up in the logs. For adding files to the database check the next section.
+Download the latest generated drop-in INI bundle from:
 
-## How to add files to your already working Custom Database:
+`https://raw.githubusercontent.com/toaks2804/Arcade_Custom/db/downloader_toaks2804_Arcade_Custom.zip`
 
-Once you have your database up and running (check previous section to figure out how to set it up), adding files is very straightforward.
-
-Just upload any file to your repository by using GitHub UI (Add File > Upload files), or via git. Once the files show up in your repository, they'll also be added to your database automatically. Alternatively, to include files without uploading them to the repository, add their external locations and corresponding paths to [external_files.csv](external_files.csv).
-
-After adding the files, you may see the *Actions* tab in your repository to see how the automation did its magic if you are curious.
-
-A couple of things to consider when uploading files:
-
-- When a user fetches the files via *update* or *update_all*, the downloaded file structure will mirror 1:1 the file structure you have in your repository at GitHub. This means, if you have a folder `_Cores/` containing some files in your repository, an identical `_Cores` folder will show up in MiSTer containing the exact same files.
-
-- The files `README.md`, `LICENSE`, and the `.github` folder won't be included in your database. Just ignore them, they won't be installed in the devices. The file `external_files.csv` won't show up on your device either, but the files listed inside it will.
-
-- You may upload as many files as you want as long as they don't violate GitHub constraints (100mb is max size per file).
-
-- You should avoid full path clashes between your files and the files from other databases so that your users don't run into issues when using multiple databases at the same time.
-
-## How your users will integrate your Custom Database in their MiSTers:
-
-Your users can integrate your database in two ways.
-
-### Drop-in database
-
-The easiest option is for users to drag and drop a file onto their SD card.
-
-For example, if your GitHub username is `jose` and your repository is `game_wallpapers`, users can download:
-
-`https://raw.githubusercontent.com/jose/game_wallpapers/db/downloader_jose_game_wallpapers.zip`
-
-Then they only need to:
-
-1. Extract `downloader_jose_game_wallpapers.ini` from the ZIP.
-2. Copy it to the **root of the MiSTer SD card**, next to `downloader.ini`.
-
-That's it. The database is ready to use.
-
-
-### Manual INI editing (for Advanced Users)
-
-If they prefer to do it manually instead, they may add the following lines to the bottom of `downloader.ini`:
+Extract `downloader_toaks2804_Arcade_Custom.ini` and place it in the root of your MiSTer SD card, next to `downloader.ini`. Alternatively, add this section to `downloader.ini`:
 
 ```ini
-[jose/game_wallpapers]
-db_url = https://raw.githubusercontent.com/jose/game_wallpapers/db/db.json.zip
+[toaks2804/Arcade_Custom]
+db_url = https://raw.githubusercontent.com/toaks2804/Arcade_Custom/db/db.json.zip
 ```
 
-This needs to be done just once by your users. After that, whenever they run *downloader* or *update_all* they'll also be installing your updated files.
+Then run Downloader's update command as usual.
 
-## Modifying README.md
+## Repository layout
 
-After you have your own repository based on this template, a good idea would be to edit your `README.md` describing the content of your database and how to use it. That way users will learn about your Database and will integrate it into their MiSTer's easily.
+The scheduled **Sync External Cores** workflow pulls supported files from the listed developer repositories. Its managed file layout is:
 
-Feel free to remove any reference to the original template there.
+- Standard MRA files: `_Arcade/_Unofficial/_Devname/game.mra`
+- Alternative MRA files: `_Arcade/_Unofficial/_Devname/_Alternatives/_Gamename/game.mra`
+- Core bitstreams (`.rbf`): `_Arcade/cores/`
+- NVRAM files (`.nvm`): `config/nvram/`
 
-## DB Inspector
+Alternative MRAs stay grouped by game in one or more `_Gamename` directories. The sync workflow tracks the files it manages and removes stale managed files when upstream repositories remove or relocate them. Files outside the tracked manifest are not treated as sync-managed.
 
-You may use this tool to inspect the resulting database easily: https://theypsilon.github.io/DB-Inspector_MiSTer
+## External downloads
+
+- `external_files.csv` is generated by the sync workflow and contains external download mappings, including core archive entries.
+- `manual_external_files.csv` is for additional external downloads you maintain yourself. Each row should contain a destination path and a URL, separated by a comma.
+- `missing_roms.csv` lists MAME ROM archives that the workflow could not resolve from its configured sources.
+- `sync_manifest.txt` records the repository paths managed by the sync workflow. Do not edit it manually.
+
+## Automation and troubleshooting
+
+The sync workflow runs daily and can also be started manually from the GitHub **Actions** tab. It scans the configured developer repositories, downloads managed files with retries, discovers MAME ROM references from MRAs, enriches external-file metadata, and commits changes when there are updates.
+
+The database build workflow runs on pushes to `main` and can be started manually. If a run fails, open **Actions**, select the failed run, and inspect the failing step's log. A successful build indicates that database generation and its validation completed; it does not guarantee every upstream core or external archive is available.
+
+## Sources
+
+This database aggregates files from the developers listed in `.github/workflows/sync_external.yml`. Please refer to those upstream repositories for core-specific documentation, licensing, and change history.
