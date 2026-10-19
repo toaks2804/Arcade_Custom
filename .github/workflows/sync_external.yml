@@ -27,7 +27,7 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "blahm1d/MiSTer-cores/main:Blahm1d"
+            "blahm1d/blahm1d-cores/main:Blahm1d"
           )
 
           > external_files.csv
@@ -135,7 +135,6 @@ jobs:
           ARCHIVE_BASE = "https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29"
           ARCHIVE_API = "https://archive.org/metadata/mame-roms-merged_/files"
 
-          # Load existing entries from external_files.csv
           existing = set()
           with open('external_files.csv') as f:
               for line in f:
@@ -145,7 +144,6 @@ jobs:
                       if len(parts) >= 2:
                           existing.add(parts[0].lower())
 
-          # Find all .mra files and extract ROM names
           roms_needed = set()
           for root, dirs, files in os.walk('_Arcade'):
               for fname in files:
@@ -155,6 +153,8 @@ jobs:
                           tree = ET.parse(mra_path)
                           root_elem = tree.getroot()
                           for rom_elem in root_elem.iter('rom'):
+                              if rom_elem.text is None:
+                                  continue
                               rom_name = rom_elem.text.strip()
                               if rom_name and rom_name.endswith('.zip'):
                                   roms_needed.add(rom_name)
@@ -163,7 +163,6 @@ jobs:
 
           print(f"Found {len(roms_needed)} unique ROMs referenced in MRA files.")
 
-          # Check which ones are already in external_files.csv
           new_roms = []
           for rom in sorted(roms_needed):
               local_path = f'games/mame/{rom}'
@@ -172,11 +171,9 @@ jobs:
 
           print(f"{len(new_roms)} ROMs not yet in external_files.csv.")
 
-          # Wipe missing_roms.csv each run
           with open('missing_roms.csv', 'w') as f:
               pass
 
-          # Fetch archive.org metadata for new ROMs
           ia_cache = {}
           added = 0
           failed = 0
