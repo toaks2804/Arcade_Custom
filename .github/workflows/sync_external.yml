@@ -29,14 +29,7 @@ jobs:
             "meathax/meatcores/main:Meathax"
             "blahm1d/MiSTer-cores/main:Blahm1d"
             "Gm0rk/Arcade-Atari-G1_MiSTer/main:Gm0rk"
-            "XelaNotPu/BreakThru_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1-TaitoFX1B_MiSTer/main:XelaNotPu"
-            "XelaNotPu/SYSTEM12_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1-Capcom_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN2-Capcom_MiSTer/main:XelaNotPu"
-            "XelaNotPu/SYSTEM11_MiSTer-Supporter/main:XelaNotPu"
-            "XelaNotPu/SUSTEMFL_MiSTer-Supporter/main:XelaNotPu"
+            "XelaNotPu/Arcade-Atari-G1_MiSTer/main:XelaNotPu"
           )
 
           > external_files.csv
@@ -78,6 +71,8 @@ jobs:
                   else:
                       if '/' in stripped:
                           stripped = stripped.split('/', 1)[1]
+                      if stripped.startswith('_Arcade/'):
+                          stripped = stripped[len('_Arcade/'):]
                       local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
                       parts = local_path.split('/')
                       for i in range(len(parts) - 1):
