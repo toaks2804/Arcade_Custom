@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -26,7 +27,7 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
-            "blahm1d/MiST-cores/main:Blahm1d"
+            "blahm1d/blahm1d-cores/main:Blahm1d"
           )
 
           > external_files.csv
@@ -36,9 +37,6 @@ jobs:
             IFS=':' read -r repo_spec target_folder <<< "$entry"
             IFS='/' read -r owner repo branch <<< "$repo_spec"
 
-            # --- Part 1: Scan repo tree ---
-            # .rbf files -> external_files.csv (downloaded on demand by user)
-            # .mra and .nvm files -> downloaded into this repo (small, needed locally)
             curl -s \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: token $GITHUB_TOKEN" \
@@ -66,16 +64,17 @@ jobs:
                   stripped = safe_path
                   if stripped.startswith('_Arcade/'):
                       stripped = stripped[len('_Arcade/'):]
-                  if '/' in stripped:
-                      first = stripped.split('/')[0].lstrip('_').lower()
-                      if first == target_folder.lower():
-                          stripped = stripped.split('/', 1)[1]
-                  if stripped.startswith('releases/'):
-                      stripped = stripped[len('releases/'):]
                   if stripped.startswith('config/'):
                       local_path = stripped
                   else:
+                      if '/' in stripped:
+                          stripped = stripped.split('/', 1)[1]
                       local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
+                      parts = local_path.split('/')
+                      for i in range(len(parts) - 1):
+                          if not parts[i].startswith('_'):
+                              parts[i] = '_' + parts[i]
+                      local_path = '/'.join(parts)
                   download_files.append((local_path, url))
           print('\n'.join(lines))
           with open('/tmp/download_files.txt', 'a') as f:
@@ -83,7 +82,6 @@ jobs:
                   f.write(f'{local_path}|{url}\n')
           " >> external_files.csv
 
-            # --- Part 2: Pull .zip ROMs from dev's external_files.csv ---
             curl -s \
               -H "Authorization: token $GITHUB_TOKEN" \
               "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
@@ -115,7 +113,6 @@ jobs:
           " >> external_files.csv
           done
 
-          # --- Download all .mra and .nvm files into the repo ---
           if [ -f /tmp/download_files.txt ]; then
             while IFS='|' read -r local_path url; do
               [ -z "$local_path" ] && continue
@@ -210,16 +207,26 @@ jobs:
           print(f"Enriched {enriched} entries, {failed} failed.")
           EOF
 
-      - name: Commit changes if any
+      - name: Commit and trigger build
+        id: commit_and_trigger
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add external_files.csv
-          git add _Arcade/
-          git add config/
+          git add _Arcade/ 2>/dev/null || true
+          git add config/ 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "No changes to sync."
+            echo "No changes to sync. Skipping build_db."
+            echo "should_trigger=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Sync: updated external_files.csv and core files"
             git push
-          fi   
+            echo "should_trigger=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger build_db workflow
+        if: steps.commit_and_trigger.outputs.should_trigger == 'true'
+        run: |
+          gh workflow run "Build Custom Database" --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
