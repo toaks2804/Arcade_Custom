@@ -143,8 +143,6 @@ jobs:
               # Keep the first primary path when repositories mirror an MRA in mra/_mra.
               selected = options[0]
               if len(options) > 1:
-                  # Different repositories can legitimately provide same-named MRAs;
-                  # identical source URLs are harmless, different files are not silently overwritten.
                   urls = {option[1] for option in options}
                   if len(urls) > 1 and selected[5] in {"rbf", "nvm"}:
                       raise RuntimeError(f"Destination collision for {dest}: " + ", ".join(option[1] for option in options))
@@ -152,6 +150,11 @@ jobs:
                       primary = [o for o in options if "/_mra/" not in ("/" + o[4].lower() + "/")]
                       if primary:
                           selected = primary[0]
+              if selected[5] == "rbf":
+                  # RBFs are distributed as external downloads; do not store large
+                  # bitstreams in this repository.
+                  external_lines.append(f"{dest},{selected[1]}")
+                  continue
               downloads[dest] = selected[1]
 
           current_managed = set(downloads)
@@ -166,13 +169,13 @@ jobs:
           os.makedirs("_Arcade/cores", exist_ok=True)
           os.makedirs("config/nvram", exist_ok=True)
           with open("external_files.csv", "w", encoding="utf-8", newline="") as f:
-              f.write("\\n".join(external_lines) + ("\\n" if external_lines else ""))
+              f.write("\n".join(external_lines) + ("\n" if external_lines else ""))
           with open("/tmp/download_files.txt", "w", encoding="utf-8") as f:
               for path, url in sorted(downloads.items()):
-                  f.write(f"{path}|{url}\\n")
+                  f.write(f"{path}|{url}\n")
           with open(old_manifest_path, "w", encoding="utf-8") as f:
               for path in sorted(current_managed):
-                  f.write(path + "\\n")
+                  f.write(path + "\n")
 
           print(f"Discovered {len(downloads)} managed core/MRA/NVM files.")
           print(f"Queued {len(external_lines)} upstream external archive entries.")
