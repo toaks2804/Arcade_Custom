@@ -182,6 +182,12 @@ jobs:
           with open('missing_roms.csv', 'w') as f:
               pass
 
+          # Track all known ROMs (existing + newly found) for child detection
+          found_roms = set()
+          for path in existing:
+              if path.startswith('games/mame/') and path.endswith('.zip'):
+                  found_roms.add(path[len('games/mame/'):-4])
+
           ia_cache = {}
           added = 0
           failed = 0
@@ -207,12 +213,22 @@ jobs:
                   with open('external_files.csv', 'a') as f:
                       f.write(f"games/mame/{rom},{url},{size},{md5}\n")
                   added += 1
+                  found_roms.add(rom[:-4])
                   print(f"  + {rom}")
               else:
-                  failed += 1
-                  with open('missing_roms.csv', 'a') as f:
-                      f.write(f"{rom}\n")
-                  print(f"  ! {rom} (not found on archive.org)")
+                  rom_base = rom[:-4]
+                  is_child = False
+                  for found in found_roms:
+                      if rom_base.startswith(found) and len(rom_base) > len(found):
+                          is_child = True
+                          break
+                  if is_child:
+                      print(f"  - {rom} (variant of {found}.zip, skipping)")
+                  else:
+                      failed += 1
+                      with open('missing_roms.csv', 'a') as f:
+                          f.write(f"{rom}\n")
+                      print(f"  ! {rom} (not found on archive.org)")
 
           print(f"\nAdded {added} ROMs, {failed} missing.")
 
