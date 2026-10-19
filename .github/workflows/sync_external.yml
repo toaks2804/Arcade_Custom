@@ -26,6 +26,7 @@ jobs:
             "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
             "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
             "meathax/meatcores/main:Meathax"
+            "blahm1d/blahm1d-cores/main:Blahm1d"
           )
 
           > external_files.csv
@@ -65,6 +66,10 @@ jobs:
                   stripped = safe_path
                   if stripped.startswith('_Arcade/'):
                       stripped = stripped[len('_Arcade/'):]
+                  if '/' in stripped:
+                      first = stripped.split('/')[0].lstrip('_').lower()
+                      if first == target_folder.lower():
+                          stripped = stripped.split('/', 1)[1]
                   if stripped.startswith('releases/'):
                       stripped = stripped[len('releases/'):]
                   local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
