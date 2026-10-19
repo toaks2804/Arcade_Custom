@@ -28,22 +28,8 @@ jobs:
             "meathax/meatcores/main:Meathax"
           )
 
-          # Wipe only the auto-generated section, preserve manual entries
-          python3 -c "
-          import re
-          with open('external_files.csv', 'r') as f:
-              content = f.read()
-          content = re.sub(
-              r'# === AUTO-GENERATED ===.*?# === END AUTO-GENERATED ===\n?',
-              '',
-              content,
-              flags=re.DOTALL
-          )
-          with open('external_files.csv', 'w') as f:
-              f.write(content)
-          "
-
-          echo "# === AUTO-GENERATED ===" >> external_files.csv
+          # Start fresh
+          > external_files.csv
 
           for entry in "${DEVS[@]}"; do
             IFS=':' read -r repo_spec target_folder <<< "$entry"
@@ -56,6 +42,8 @@ jobs:
               "https://api.github.com/repos/$owner/$repo/git/trees/$branch?recursive=1" \
               | python3 -c "
           import sys, json
+          from urllib.parse import quote
+
           data = json.load(sys.stdin)
           tree = data.get('tree', [])
           owner, repo, branch = '$owner', '$repo', '$branch'
@@ -65,7 +53,7 @@ jobs:
               if item['type'] != 'blob':
                   continue
               path = item['path']
-              url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}'
+              url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quote(path, safe=\"/\")}'
               if path.endswith('.rbf'):
                   filename = path.split('/')[-1]
                   lines.append(f'_Arcade/cores/{filename},{url}')
@@ -83,6 +71,7 @@ jobs:
               "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
               | python3 -c "
           import sys, re
+          from urllib.parse import quote
 
           url_pattern = re.compile(r'^https?://')
 
@@ -109,7 +98,10 @@ jobs:
           " >> external_files.csv
           done
 
-          echo "# === END AUTO-GENERATED ===" >> external_files.csv
+          # Append manual entries if the file exists
+          if [ -f manual_external_files.csv ]; then
+            cat manual_external_files.csv >> external_files.csv
+          fi
 
       - name: Commit changes if any
         run: |
