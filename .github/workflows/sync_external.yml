@@ -82,7 +82,8 @@ jobs:
                   if i + 2 >= len(parts):
                       raise ValueError(f"Alternative MRA lacks a game folder: {path}")
                   game = parts[i + 1]
-                  game = game if game.startswith("_") else "_" + game
+                  # Normalize to exactly one leading underscore, even if upstream has several.
+                  game = "_" + game.lstrip("_")
                   return f"_Arcade/_Unofficial/_{dev}/_Alternatives/{game}/{filename}"
               # A few repositories keep a duplicate mirror in mra/_mra. Prefer
               # the primary MRA path, but retain the filename and developer folder.
