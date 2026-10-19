@@ -18,119 +18,180 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Scan all dev repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          DEVS=(
-            "kuzearcade/Arcade-GingaNin_MiSTer/main:KuzeArcade"
-            "kuzearcade/Arcade-JalecoMS1BCD_MiSTer/main:KuzeArcade"
-            "kuzearcade/Arcade-NamcoSystem2_MiSTer/main:KuzeArcade"
-            "kuzearcade/Arcade-NMK16_MiSTer/main:KuzeArcade"
-            "kuzearcade/Arcade-NMKBP964_MiSTer/main:KuzeArcade"
-            "kuzearcade/Arcade-SandScrp_MiSTer/main:KuzeArcade"
-            "meathax/meatcores/main:Meathax"
-            "blahm1d/MiSTer-cores/main:Blahm1d"
-            "Gm0rk/Arcade-Atari-G1_MiSTer/main:Gm0rk"
-            "XelaNotPu/BreakThru_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1-TaitoFX1B_MiSTer/main:XelaNotPu"
-            "XelaNotPu/SYSTEM12_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN1-Capcom_MiSTer/main:XelaNotPu"
-            "XelaNotPu/ZN2-Capcom_MiSTer/main:XelaNotPu"
-            "XelaNotPu/SYSTEM11_MiSTer-Supporter/main:XelaNotPu"
-            "XelaNotPu/SYSTEMFL_MiSTer-Supporter/main:XelaNotPu"
-          )
-
-          > external_files.csv
-          > /tmp/download_files.txt
-
-          for entry in "${DEVS[@]}"; do
-            IFS=':' read -r repo_spec target_folder <<< "$entry"
-            IFS='/' read -r owner repo branch <<< "$repo_spec"
-
-            curl -s \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/$owner/$repo/git/trees/$branch?recursive=1" \
-              | python3 -c "
-          import sys, json
+          python3 <<'PY'
+          import csv
+          import json
+          import os
+          import shutil
+          import sys
+          from collections import defaultdict
+          from urllib.error import HTTPError, URLError
           from urllib.parse import quote
+          from urllib.request import Request, urlopen
 
-          data = json.load(sys.stdin)
-          tree = data.get('tree', [])
-          owner, repo, branch = '$owner', '$repo', '$branch'
-          target_folder = '$target_folder'
-          lines = []
-          download_files = []
-          for item in tree:
-              if item['type'] != 'blob':
+          DEVS = [
+              ("kuzearcade", "Arcade-GingaNin_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-JalecoMS1BCD_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-NamcoSystem2_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-NMK16_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-NMKBP964_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-SandScrp_MiSTer", "main", "KuzeArcade"),
+              ("meathax", "meatcores", "main", "Meathax"),
+              ("blahm1d", "MiSTer-cores", "main", "Blahm1d"),
+              ("Gm0rk", "Arcade-Atari-G1_MiSTer", "main", "Gm0rk"),
+              ("XelaNotPu", "BreakThru_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "ZN1_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "ZN1-TaitoFX1B_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "SYSTEM12_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "ZN1-Capcom_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "ZN2-Capcom_MiSTer", "main", "XelaNotPu"),
+              ("XelaNotPu", "SYSTEM11_MiSTer-Supporter", "main", "XelaNotPu"),
+              ("XelaNotPu", "SYSTEMFL_MiSTer-Supporter", "main", "XelaNotPu"),
+          ]
+          TOKEN = os.environ["GITHUB_TOKEN"]
+          headers = {"Accept": "application/vnd.github+json", "Authorization": f"Bearer {TOKEN}", "X-GitHub-Api-Version": "2022-11-28"}
+
+          def get_bytes(url, api=False):
+              req = Request(url, headers=headers if api else {"User-Agent": "Arcade-Custom-Sync"})
+              with urlopen(req, timeout=60) as response:
+                  return response.read()
+
+          def relative_source(path):
+              # Return the path below the upstream repo's usual mra/ or _Arcade/ root.
+              parts = path.replace("\\", "/").split("/")
+              lower = [part.lower() for part in parts]
+              for marker in ("mra", "_arcade", "arcade"):
+                  if marker in lower:
+                      parts = parts[lower.index(marker) + 1:]
+                      break
+              return parts
+
+          def destination(path, kind, dev):
+              filename = path.rsplit("/", 1)[-1]
+              if kind == "rbf":
+                  return f"_Arcade/cores/{filename}"
+              if kind == "nvm":
+                  return f"config/nvram/{filename}"
+              parts = relative_source(path)
+              lower = [part.lower() for part in parts]
+              if "_alternatives" in lower:
+                  i = lower.index("_alternatives")
+                  if i + 2 >= len(parts):
+                      raise ValueError(f"Alternative MRA lacks a game folder: {path}")
+                  game = parts[i + 1]
+                  # Normalize to exactly one leading underscore, even if upstream has several.
+                  game = "_" + game.lstrip("_")
+                  return f"_Arcade/_Unofficial/_{dev}/_Alternatives/{game}/{filename}"
+              # A few repositories keep a duplicate mirror in mra/_mra. Prefer
+              # the primary MRA path, but retain the filename and developer folder.
+              return f"_Arcade/_Unofficial/_{dev}/{filename}"
+
+          old_manifest_path = "sync_manifest.txt"
+          try:
+              with open(old_manifest_path, encoding="utf-8") as f:
+                  old_managed = {line.strip() for line in f if line.strip()}
+          except FileNotFoundError:
+              old_managed = set()
+
+          candidates = defaultdict(list)
+          external_lines = []
+          for owner, repo, branch, dev in DEVS:
+              api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{branch}?recursive=1"
+              try:
+                  tree = json.loads(get_bytes(api_url, api=True))
+              except Exception as exc:
+                  raise RuntimeError(f"Unable to read tree for {owner}/{repo}: {exc}") from exc
+              if tree.get("truncated"):
+                  raise RuntimeError(f"Git tree was truncated for {owner}/{repo}; refusing incomplete sync.")
+              for item in tree.get("tree", []):
+                  if item.get("type") != "blob":
+                      continue
+                  source = item["path"]
+                  ext = source.lower().rsplit(".", 1)[-1] if "." in source else ""
+                  if ext not in {"mra", "rbf", "nvm"}:
+                      continue
+                  # source/mra is a flattened build/source mirror in some XelaNotPu
+                  # repositories. It loses the upstream _alternatives/_Gamename
+                  # grouping, so only use the canonical release/_Arcade MRA tree.
+                  if ext == "mra" and "/source/mra/" in ("/" + source.lower() + "/"):
+                      continue
+                  url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quote(source, safe='/')}"
+                  kind = ext
+                  dest = destination(source, kind, dev)
+                  # Prefer the primary MRA tree over mirrored mra/_mra copies.
+                  score = 1 if "/_mra/" in ("/" + source.lower() + "/") else 0
+                  candidates[dest].append((score, url, owner, repo, source, kind))
+
+              raw_csv = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/external_files.csv"
+              try:
+                  content = get_bytes(raw_csv).decode("utf-8-sig")
+              except HTTPError as exc:
+                  if exc.code == 404:
+                      continue
+                  raise RuntimeError(f"Unable to read {raw_csv}: {exc}") from exc
+              for row in csv.reader(content.splitlines()):
+                  if not row:
+                      continue
+                  parts = [part.strip() for part in row]
+                  url = next((p for p in parts if p.startswith(("https://", "http://"))), None)
+                  path = next((p for p in parts if p.lower().endswith(".zip")), None)
+                  if url and path:
+                      external_lines.append(f"{path},{url}")
+                  elif url and url.split("?", 1)[0].lower().endswith(".zip"):
+                      external_lines.append(f"games/mame/{url.split('/')[-1].split('?', 1)[0]},{url}")
+
+          downloads = {}
+          for dest, options in candidates.items():
+              options.sort(key=lambda item: (item[0], item[2].lower(), item[3].lower(), item[4].lower()))
+              # Keep the first primary path when repositories mirror an MRA in mra/_mra.
+              selected = options[0]
+              if len(options) > 1:
+                  urls = {option[1] for option in options}
+                  if len(urls) > 1 and selected[5] in {"rbf", "nvm"}:
+                      raise RuntimeError(f"Destination collision for {dest}: " + ", ".join(option[1] for option in options))
+                  if len(urls) > 1 and selected[5] == "mra":
+                      primary = [o for o in options if "/_mra/" not in ("/" + o[4].lower() + "/")]
+                      if primary:
+                          selected = primary[0]
+              if selected[5] == "rbf":
+                  # RBFs are distributed as external downloads; do not store large
+                  # bitstreams in this repository.
+                  external_lines.append(f"{dest},{selected[1]}")
                   continue
-              path = item['path']
-              url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quote(path, safe=\"/\")}'
-              safe_path = path.replace(',', ' ')
-              if path.endswith('.rbf'):
-                  filename = path.split('/')[-1].replace(',', ' ')
-                  lines.append(f'_Arcade/cores/{filename},{url}')
-              elif path.endswith('.mra') or path.endswith('.nvm'):
-                  stripped = safe_path
-                  if stripped.startswith('_Arcade/'):
-                      stripped = stripped[len('_Arcade/'):]
-                  if stripped.startswith('config/'):
-                      local_path = stripped
-                  else:
-                      if '/' in stripped:
-                          stripped = stripped.split('/', 1)[1]
-                      if stripped.startswith('_Arcade/'):
-                          stripped = stripped[len('_Arcade/'):]
-                      local_path = f'_Arcade/Unofficial/{target_folder}/{stripped}'
-                      parts = local_path.split('/')
-                      for i in range(len(parts) - 1):
-                          if not parts[i].startswith('_'):
-                              parts[i] = '_' + parts[i]
-                      local_path = '/'.join(parts)
-                  download_files.append((local_path, url))
-          print('\n'.join(lines))
-          with open('/tmp/download_files.txt', 'a') as f:
-              for local_path, url in download_files:
-                  f.write(f'{local_path}|{url}\n')
-          " >> external_files.csv
+              downloads[dest] = selected[1]
 
-            curl -s \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://raw.githubusercontent.com/$owner/$repo/$branch/external_files.csv" \
-              | python3 -c "
-          import sys, re
+          current_managed = set(downloads)
+          # Remove only paths this workflow previously declared as managed.
+          for stale in sorted(old_managed - current_managed):
+              if not (stale.startswith("_Arcade/cores/") or stale.startswith("_Arcade/_Unofficial/") or stale.startswith("config/nvram/")):
+                  raise RuntimeError(f"Unsafe stale path in sync manifest: {stale}")
+              if os.path.isfile(stale):
+                  os.remove(stale)
+                  print(f"Removed stale managed file: {stale}")
 
-          url_pattern = re.compile(r'^https?://')
+          os.makedirs("_Arcade/cores", exist_ok=True)
+          os.makedirs("config/nvram", exist_ok=True)
+          with open("external_files.csv", "w", encoding="utf-8", newline="") as f:
+              f.write("\n".join(external_lines) + ("\n" if external_lines else ""))
+          with open("/tmp/download_files.txt", "w", encoding="utf-8") as f:
+              for path, url in sorted(downloads.items()):
+                  f.write(f"{path}|{url}\n")
+          with open(old_manifest_path, "w", encoding="utf-8") as f:
+              for path in sorted(current_managed):
+                  f.write(path + "\n")
 
-          for line in sys.stdin:
-              line = line.strip()
-              if not line or line.startswith('#'):
-                  continue
-              parts = [p.strip() for p in line.split(',')]
+          print(f"Discovered {len(downloads)} managed core/MRA/NVM files.")
+          print(f"Queued {len(external_lines)} upstream external archive entries.")
+          PY
 
-              url = None
-              path = None
-              for p in parts:
-                  if url_pattern.match(p):
-                      url = p
-                  elif p.endswith('.zip'):
-                      path = p
-
-              if url and path:
-                  print(f'{path},{url}')
-              elif url and not path:
-                  filename = url.split('/')[-1].split('?')[0]
-                  if filename.endswith('.zip'):
-                      print(f'games/mame/{filename},{url}')
-          " >> external_files.csv
-          done
-
-          if [ -f /tmp/download_files.txt ]; then
-            while IFS='|' read -r local_path url; do
-              [ -z "$local_path" ] && continue
-              mkdir -p "$(dirname "$local_path")"
-              curl -sL -o "$local_path" "$url"
-            done < /tmp/download_files.txt
-          fi
+          while IFS='|' read -r local_path url; do
+            [ -z "$local_path" ] && continue
+            mkdir -p "$(dirname "$local_path")"
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --output "$local_path" "$url"
+          done < /tmp/download_files.txt
 
           if [ -f manual_external_files.csv ]; then
             cat manual_external_files.csv >> external_files.csv
@@ -378,6 +439,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add external_files.csv
+          git add sync_manifest.txt
           git add missing_roms.csv 2>/dev/null || true
           git add _Arcade/ 2>/dev/null || true
           git add config/ 2>/dev/null || true
