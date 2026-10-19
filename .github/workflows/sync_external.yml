@@ -147,7 +147,7 @@ jobs:
           # Keep only the newest dated RBF for each core. The date is the final
           # underscore-delimited YYYYMMDD suffix; optional letters (for example, 20261019b)
           # distinguish revisions on the same date. Preserve the selected upstream filename.
-          dated_rbf = re.compile(r"^(?P<core>.+)_(?P<date>\\d{8})(?P<revision>[a-z]*)\\.rbf$", re.IGNORECASE)
+          dated_rbf = re.compile(r"^(?P<core>.+)_(?P<date>\d{8})(?P<revision>[a-z]*)\.rbf$", re.IGNORECASE)
           latest_rbf = {}
           parsed_rbf = {}
           for dest, options in candidates.items():
