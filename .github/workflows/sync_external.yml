@@ -189,7 +189,6 @@ jobs:
               if path.startswith('games/mame/') and path.endswith('.zip'):
                   found_roms.add(path[len('games/mame/'):-4])
 
-          # Fetch OngoFiles full file list once (handles any subdirectory)
           print("Fetching OngoFiles collection list...")
           ongoing_file_map = {}
           try:
@@ -199,7 +198,8 @@ jobs:
               for item in result:
                   name = item.get('name', '')
                   if name.endswith('.zip'):
-                      ongoing_file_map[name.lower()] = (item.get('size'), item.get('md5'), name)
+                      filename = name.split('/')[-1].lower()
+                      ongoing_file_map[filename] = (item.get('size'), item.get('md5'), name)
               print(f"  Loaded {len(ongoing_file_map)} .zip files from OngoFiles.")
           except Exception as e:
               print(f"  WARN: Could not fetch OngoFiles list: {e}")
@@ -211,7 +211,6 @@ jobs:
           for rom in new_roms:
               size, md5, url = None, None, None
 
-              # Primary: direct API lookup in mame-roms-merged_
               if rom in ia_cache:
                   size, md5 = ia_cache[rom]
                   if size:
@@ -232,7 +231,6 @@ jobs:
                       ia_cache[rom] = (None, None)
                   time.sleep(0.1)
 
-              # Secondary: search OngoFiles full list
               if not size:
                   entry = ongoing_file_map.get(rom.lower())
                   if entry:
