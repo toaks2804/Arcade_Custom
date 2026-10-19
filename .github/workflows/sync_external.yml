@@ -153,11 +153,18 @@ jobs:
                           tree = ET.parse(mra_path)
                           root_elem = tree.getroot()
                           for rom_elem in root_elem.iter('rom'):
-                              if rom_elem.text is None:
-                                  continue
-                              rom_name = rom_elem.text.strip()
-                              if rom_name and rom_name.endswith('.zip'):
-                                  roms_needed.add(rom_name)
+                              name_elem = rom_elem.find('name')
+                              if name_elem is not None and name_elem.text:
+                                  rom_name = name_elem.text.strip()
+                                  if rom_name:
+                                      roms_needed.add(rom_name + '.zip')
+                              for part_elem in rom_elem.iter('part'):
+                                  zip_attr = part_elem.get('zip')
+                                  if zip_attr:
+                                      for z in zip_attr.split('|'):
+                                          z = z.strip()
+                                          if z:
+                                              roms_needed.add(z)
                       except ET.ParseError:
                           pass
 
