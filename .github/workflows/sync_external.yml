@@ -25,6 +25,7 @@ jobs:
           import csv
           import json
           import os
+          import re
           import shutil
           import sys
           from collections import defaultdict
@@ -142,6 +143,48 @@ jobs:
                       external_lines.append(f"{path},{url}")
                   elif url and url.split("?", 1)[0].lower().endswith(".zip"):
                       external_lines.append(f"games/mame/{url.split('/')[-1].split('?', 1)[0]},{url}")
+
+          # Keep only the newest dated RBF for each core. The date is the final
+          # underscore-delimited YYYYMMDD suffix; optional letters (for example, 20261019b)
+          # distinguish revisions on the same date. Preserve the selected upstream filename.
+          dated_rbf = re.compile(r"^(?P<core>.+)_(?P<date>\\d{8})(?P<revision>[a-z]*)\\.rbf$", re.IGNORECASE)
+          latest_rbf = {}
+          parsed_rbf = {}
+          for dest, options in candidates.items():
+              if options[0][5] != "rbf":
+                  continue
+              filename = dest.rsplit("/", 1)[-1]
+              match = dated_rbf.match(filename)
+              if not match:
+                  continue
+              core = match.group("core").casefold()
+              version = (match.group("date"), match.group("revision").casefold())
+              parsed_rbf[dest] = (core, version)
+              if core not in latest_rbf or version > latest_rbf[core]:
+                  latest_rbf[core] = version
+
+          # Remove older dated releases, plus an undated copy if a dated release for
+          # that exact core exists. Undated cores without a dated counterpart are kept.
+          for dest, (core, version) in list(parsed_rbf.items()):
+              if version < latest_rbf[core]:
+                  latest_date, latest_revision = latest_rbf[core]
+                  latest_suffix = latest_date + latest_revision
+                  print(f"Skipping older RBF release {dest}; newest is {core}_{latest_suffix}.rbf")
+                  del candidates[dest]
+          for dest, options in list(candidates.items()):
+              if options[0][5] != "rbf":
+                  continue
+              filename = dest.rsplit("/", 1)[-1]
+              if dated_rbf.match(filename):
+                  continue
+              stem = filename[:-4] if filename.lower().endswith(".rbf") else filename
+              core = stem.casefold()
+              if core in latest_rbf:
+                  latest_date, latest_revision = latest_rbf[core]
+                  latest_suffix = latest_date + latest_revision
+                  print(f"Skipping undated RBF {dest}; dated release {stem}_{latest_suffix}.rbf exists")
+                  del candidates[dest]
+          print(f"Selected newest dated RBF releases for {len(latest_rbf)} cores.")
 
           downloads = {}
           for dest, options in candidates.items():
