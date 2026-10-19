@@ -187,7 +187,7 @@ _Arcade/cores/Arcade-XNZN1TaitoFX1B_20260814.rbf,https://raw.githubusercontent.c
 _Arcade/cores/Arcade-ZN1Capcom_20260820.rbf,https://raw.githubusercontent.com/XelaNotPu/ZN1-Capcom_MiSTer/main/releases/_Arcade/cores/Arcade-ZN1Capcom_20260820.rbf,4215064,4eb0333e0b00a0292c7d00ad08f4098c
 _Arcade/cores/Arcade-ZN2Capcom_20260828.rbf,https://raw.githubusercontent.com/XelaNotPu/ZN2-Capcom_MiSTer/main/releases/_Arcade/cores/Arcade-ZN2Capcom_20260828.rbf,4412580,055fca4c0420d58af14be3dbb8929386
 _Arcade/cores/Arcade-XNSYSTEM11_20260911.rbf,https://raw.githubusercontent.com/XelaNotPu/SYSTEM11_MiSTer-Supporter/main/releases/_Arcade/cores/Arcade-XNSYSTEM11_20260911.rbf,3991168,f5602c8382a97254760f50dd591bd991
-
+_Arcade/cores/Arcade-XNSYSTEMFL_20260923.rbf,https://raw.githubusercontent.com/XelaNotPu/SYSTEMFL_MiSTer-Supporter/main/_Arcade/cores/Arcade-XNSYSTEMFL_20260923.rbf,4619508,b9ac2aaffabdfd457ab06ab9e8c48a86
 games/mame/64street.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/64street.zip,1512473,92ffcc2ce38cc9fb2b9131cbc0115796
 games/mame/acrobatm.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/acrobatm.zip,2178082,a1b03e77dda773dd5e10a39e73abe5a9
 games/mame/airattck.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/airattck.zip,1114452,cd9b4ea670b54245af903294392f3da0
@@ -288,6 +288,7 @@ games/mame/danceyes.zip,https://archive.org/download/mame-roms-merged_/MAME%20RO
 games/mame/doapp.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/doapp.zip,14535271,c911786128d32a01c20e050321b0cfb9
 games/mame/dunkmnia.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/dunkmnia.zip,9587978,b54e8a95529a1b22a16957d33537a43c
 games/mame/esckids.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/esckids.zip,1106375,79d5d82ee0ceb63723b5fcbd9af714f0
+games/mame/finalapr.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/finalapr.zip,6084503,a426a370d388c773b710dc8b4b082820
 games/mame/flamegun.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/flamegun.zip,31688319,031d1ff2eba69c8075d8a123f59e4918
 games/mame/ftimpcta.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/ftimpcta.zip,15063475,a805915849f83d8f0db7c39020b8da96
 games/mame/gdarius2.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/gdarius2.zip,21742173,cd8af31679571b067b99965a90d90f92
@@ -310,6 +311,7 @@ games/mame/mk2.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20
 games/mame/mk3.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/mk3.zip,22039125,644fa51615d61a0eb2c2c0f31374d19d
 games/mame/mk4.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/mk4.zip,37207225,d696fb91a4520430f47c4c65e92f39c4
 games/mame/myangel3.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/myangel3.zip,22413120,0c16ab6cffac30c1c3cb987124e7b929
+games/mame/namcoc75.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/namcoc75.zip,8709,17516c33298e52424ffb58afc2ad208c
 games/mame/namcoc76.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/namcoc76.zip,9579,c0e177c75fa95ae46143e0609f58caaa
 games/mame/nbahangt.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/nbahangt.zip,21863048,b8d5756c46d335829e25e7ea9db27c1f
 games/mame/nbajam.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/nbajam.zip,13883644,36edaef76b432b415b7937a9912480c7
@@ -339,6 +341,7 @@ games/mame/showdown.zip,https://archive.org/download/mame-roms-merged_/MAME%20RO
 games/mame/simpsons.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/simpsons.zip,3761217,fabf842ca6cea2478002366f7ac5a75b
 games/mame/smashtv.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/smashtv.zip,1260603,06265ab9b0994908ad9831c04b98bd8e
 games/mame/souledge.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/souledge.zip,25737673,fd8e3d8ee1aa9d26651b2ec9dbb940ba
+games/mame/speedrcr.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/speedrcr.zip,8968455,629b1ac40bc33b166f5525c2acdc42b3
 games/mame/starglad.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/starglad.zip,11235620,3951217070cfda0e0b7618e12697963f
 games/mame/starswep.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/starswep.zip,3748766,99f65cfef7a480a7b2a435912a7466b2
 games/mame/strider2.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/strider2.zip,21408994,151fd5321ca37c61440420efb5b344c5
