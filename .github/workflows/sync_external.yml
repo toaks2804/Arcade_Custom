@@ -151,7 +151,27 @@ jobs:
               if len(options) > 1:
                   urls = {option[1] for option in options}
                   if len(urls) > 1 and selected[5] in {"rbf", "nvm"}:
-                      raise RuntimeError(f"Destination collision for {dest}: " + ", ".join(option[1] for option in options))
+                      # Some upstream repos mirror the same RBF in both
+                      # _Arcade/cores/ and cores/. Prefer the canonical _Arcade copy
+                      # only when all conflicting paths belong to the same repo.
+                      canonical = [
+                          option for option in options
+                          if "/_arcade/cores/" in ("/" + option[4].lower() + "/")
+                      ]
+                      same_repo = len({
+                          (option[2].lower(), option[3].lower()) for option in options
+                      }) == 1
+                      if selected[5] == "rbf" and canonical and same_repo:
+                          selected = canonical[0]
+                          print(
+                              f"Using canonical RBF path {selected[4]} for {dest}; "
+                              "ignoring mirrored copy."
+                          )
+                      else:
+                          raise RuntimeError(
+                              f"Destination collision for {dest}: "
+                              + ", ".join(option[1] for option in options)
+                          )
                   if len(urls) > 1 and selected[5] == "mra":
                       primary = [o for o in options if "/_mra/" not in ("/" + o[4].lower() + "/")]
                       if primary:
