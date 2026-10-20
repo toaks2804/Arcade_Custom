@@ -52,7 +52,7 @@ jobs:
               ("XelaNotPu", "SYSTEM11_MiSTer-Supporter", "main", "XelaNotPu"),
               ("XelaNotPu", "SYSTEMFL_MiSTer-Supporter", "main", "XelaNotPu"),
               ("rmonic79", "rmcores", "main", "rmonic79"),
-              ("decoryah". "Arcade-JackieChan_MiSTer",,"decoryah"),
+              ("decoryah". "Arcade-JackieChan_MiSTer", "","decoryah"),
           ]
           TOKEN = os.environ["GITHUB_TOKEN"]
           headers = {"Accept": "application/vnd.github+json", "Authorization": f"Bearer {TOKEN}", "X-GitHub-Api-Version": "2022-11-28"}
