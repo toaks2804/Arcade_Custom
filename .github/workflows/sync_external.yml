@@ -105,12 +105,46 @@ jobs:
 
           candidates = defaultdict(list)
           external_lines = []
-          for owner, repo, branch, dev in DEVS:
-              api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{branch}?recursive=1"
+          for owner, repo, preferred_branch, dev in DEVS:
+              # Prefer the configured branch (usually main), then try main/master,
+              # and finally the repository's declared default branch. This handles
+              # upstreams that rename main to master or use a custom default branch.
+              repo_api = f"https://api.github.com/repos/{owner}/{repo}"
               try:
-                  tree = json.loads(get_bytes(api_url, api=True))
+                  repo_info = json.loads(get_bytes(repo_api, api=True))
               except Exception as exc:
-                  raise RuntimeError(f"Unable to read tree for {owner}/{repo}: {exc}") from exc
+                  raise RuntimeError(f"Unable to read repository metadata for {owner}/{repo}: {exc}") from exc
+
+              default_branch = repo_info.get("default_branch")
+              branch_candidates = []
+              for candidate in (preferred_branch, "main", "master", default_branch):
+                  if candidate and candidate not in branch_candidates:
+                      branch_candidates.append(candidate)
+
+              tree = None
+              branch = None
+              branch_errors = []
+              for candidate in branch_candidates:
+                  api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{quote(candidate, safe='')}?recursive=1"
+                  try:
+                      tree = json.loads(get_bytes(api_url, api=True))
+                      branch = candidate
+                      break
+                  except HTTPError as exc:
+                      if exc.code == 404:
+                          branch_errors.append(f"{candidate}: not found")
+                          continue
+                      raise RuntimeError(f"Unable to read tree for {owner}/{repo} on branch {candidate}: {exc}") from exc
+                  except Exception as exc:
+                      raise RuntimeError(f"Unable to read tree for {owner}/{repo} on branch {candidate}: {exc}") from exc
+
+              if tree is None:
+                  print(
+                      f"WARNING: Skipping {owner}/{repo}; no usable branch found "
+                      f"(tried {', '.join(branch_candidates)}; {', '.join(branch_errors)})."
+                  )
+                  continue
+              print(f"Scanning {owner}/{repo} on branch {branch}.")
               if tree.get("truncated"):
                   raise RuntimeError(f"Git tree was truncated for {owner}/{repo}; refusing incomplete sync.")
               for item in tree.get("tree", []):
