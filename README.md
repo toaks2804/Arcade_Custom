@@ -23,7 +23,7 @@ The scheduled **Sync External Cores** workflow pulls supported files from the li
 
 - Standard MRA files: `_Arcade/_Unofficial/_Devname/game.mra`
 - Alternative MRA files: `_Arcade/_Unofficial/_Devname/_Alternatives/_Gamename/game.mra`
-- Core bitstreams (`.rbf`): `_Arcade/cores/`
+- Core bitstreams (`.rbf`): `_Arcade/cores/` (original upstream filenames are preserved; for dated releases, the sync keeps only the newest dated version per core in `external_files.csv`).
 - NVRAM files (`.nvm`): `config/nvram/`
 
 Alternative MRAs stay grouped by game in one or more `_Gamename` directories. The sync workflow tracks the files it manages and removes stale managed files when upstream repositories remove or relocate them. Files outside the tracked manifest are not treated as sync-managed.

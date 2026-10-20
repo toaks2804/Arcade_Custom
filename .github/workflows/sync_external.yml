@@ -25,6 +25,7 @@ jobs:
           import csv
           import json
           import os
+          import re
           import shutil
           import sys
           from collections import defaultdict
@@ -36,7 +37,7 @@ jobs:
               ("kuzearcade", "Arcade-GingaNin_MiSTer", "main", "KuzeArcade"),
               ("kuzearcade", "Arcade-JalecoMS1BCD_MiSTer", "main", "KuzeArcade"),
               ("kuzearcade", "Arcade-NamcoSystem2_MiSTer", "main", "KuzeArcade"),
-              ("kuzearcade", "Arcade-NMK16_MiSTer", "main", "KuzeArcade"),
+              ("kuzearcade", "Arcade-NMK16_MiSTer", "master", "KuzeArcade"),
               ("kuzearcade", "Arcade-NMKBP964_MiSTer", "main", "KuzeArcade"),
               ("kuzearcade", "Arcade-SandScrp_MiSTer", "main", "KuzeArcade"),
               ("meathax", "meatcores", "main", "Meathax"),
@@ -50,6 +51,8 @@ jobs:
               ("XelaNotPu", "ZN2-Capcom_MiSTer", "main", "XelaNotPu"),
               ("XelaNotPu", "SYSTEM11_MiSTer-Supporter", "main", "XelaNotPu"),
               ("XelaNotPu", "SYSTEMFL_MiSTer-Supporter", "main", "XelaNotPu"),
+              ("rmonic79", "rmcores", "main", "rmonic79"),
+              ("decoryah", "Arcade-JackieChan_MiSTer", "","decoryah"),
           ]
           TOKEN = os.environ["GITHUB_TOKEN"]
           headers = {"Accept": "application/vnd.github+json", "Authorization": f"Bearer {TOKEN}", "X-GitHub-Api-Version": "2022-11-28"}
@@ -72,6 +75,11 @@ jobs:
           def destination(path, kind, dev):
               filename = path.rsplit("/", 1)[-1]
               if kind == "rbf":
+                  # Route to the console destination only when the upstream source
+                  # path contains a folder named _Console (case-insensitive).
+                  source_parts = path.replace("\\", "/").split("/")
+                  if any(part.casefold() == "_console" for part in source_parts[:-1]):
+                      return f"_Console/{filename}"
                   return f"_Arcade/cores/{filename}"
               if kind == "nvm":
                   return f"config/nvram/{filename}"
@@ -98,12 +106,46 @@ jobs:
 
           candidates = defaultdict(list)
           external_lines = []
-          for owner, repo, branch, dev in DEVS:
-              api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{branch}?recursive=1"
+          for owner, repo, preferred_branch, dev in DEVS:
+              # Prefer the configured branch (usually main), then try main/master,
+              # and finally the repository's declared default branch. This handles
+              # upstreams that rename main to master or use a custom default branch.
+              repo_api = f"https://api.github.com/repos/{owner}/{repo}"
               try:
-                  tree = json.loads(get_bytes(api_url, api=True))
+                  repo_info = json.loads(get_bytes(repo_api, api=True))
               except Exception as exc:
-                  raise RuntimeError(f"Unable to read tree for {owner}/{repo}: {exc}") from exc
+                  raise RuntimeError(f"Unable to read repository metadata for {owner}/{repo}: {exc}") from exc
+
+              default_branch = repo_info.get("default_branch")
+              branch_candidates = []
+              for candidate in (preferred_branch, "main", "master", default_branch):
+                  if candidate and candidate not in branch_candidates:
+                      branch_candidates.append(candidate)
+
+              tree = None
+              branch = None
+              branch_errors = []
+              for candidate in branch_candidates:
+                  api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{quote(candidate, safe='')}?recursive=1"
+                  try:
+                      tree = json.loads(get_bytes(api_url, api=True))
+                      branch = candidate
+                      break
+                  except HTTPError as exc:
+                      if exc.code == 404:
+                          branch_errors.append(f"{candidate}: not found")
+                          continue
+                      raise RuntimeError(f"Unable to read tree for {owner}/{repo} on branch {candidate}: {exc}") from exc
+                  except Exception as exc:
+                      raise RuntimeError(f"Unable to read tree for {owner}/{repo} on branch {candidate}: {exc}") from exc
+
+              if tree is None:
+                  print(
+                      f"WARNING: Skipping {owner}/{repo}; no usable branch found "
+                      f"(tried {', '.join(branch_candidates)}; {', '.join(branch_errors)})."
+                  )
+                  continue
+              print(f"Scanning {owner}/{repo} on branch {branch}.")
               if tree.get("truncated"):
                   raise RuntimeError(f"Git tree was truncated for {owner}/{repo}; refusing incomplete sync.")
               for item in tree.get("tree", []):
@@ -143,6 +185,52 @@ jobs:
                   elif url and url.split("?", 1)[0].lower().endswith(".zip"):
                       external_lines.append(f"games/mame/{url.split('/')[-1].split('?', 1)[0]},{url}")
 
+          # Keep only the newest dated RBF for each core. The date is the final
+          # underscore-delimited YYYYMMDD suffix; optional letters (for example, 20261019b)
+          # distinguish revisions on the same date. Preserve the selected upstream filename.
+          dated_rbf = re.compile(r"^(?P<core>.+)_(?P<date>\d{8})(?P<revision>[a-z]*)\.rbf$", re.IGNORECASE)
+          latest_rbf = {}
+          parsed_rbf = {}
+          for dest, options in candidates.items():
+              if options[0][5] != "rbf":
+                  continue
+              filename = dest.rsplit("/", 1)[-1]
+              match = dated_rbf.match(filename)
+              if not match:
+                  continue
+              # Keep arcade and console release histories independent even if a
+              # developer happens to use the same core filename in both places.
+              destination_group = "_console" if dest.startswith("_Console/") else "_arcade"
+              core = (destination_group, match.group("core").casefold())
+              version = (match.group("date"), match.group("revision").casefold())
+              parsed_rbf[dest] = (core, version)
+              if core not in latest_rbf or version > latest_rbf[core]:
+                  latest_rbf[core] = version
+
+          # Remove older dated releases, plus an undated copy if a dated release for
+          # that exact core exists. Undated cores without a dated counterpart are kept.
+          for dest, (core, version) in list(parsed_rbf.items()):
+              if version < latest_rbf[core]:
+                  latest_date, latest_revision = latest_rbf[core]
+                  latest_suffix = latest_date + latest_revision
+                  print(f"Skipping older RBF release {dest}; newest dated suffix is {latest_suffix}.rbf")
+                  del candidates[dest]
+          for dest, options in list(candidates.items()):
+              if options[0][5] != "rbf":
+                  continue
+              filename = dest.rsplit("/", 1)[-1]
+              if dated_rbf.match(filename):
+                  continue
+              stem = filename[:-4] if filename.lower().endswith(".rbf") else filename
+              destination_group = "_console" if dest.startswith("_Console/") else "_arcade"
+              core = (destination_group, stem.casefold())
+              if core in latest_rbf:
+                  latest_date, latest_revision = latest_rbf[core]
+                  latest_suffix = latest_date + latest_revision
+                  print(f"Skipping undated RBF {dest}; a dated release with suffix {latest_suffix}.rbf exists")
+                  del candidates[dest]
+          print(f"Selected newest dated RBF releases for {len(latest_rbf)} cores.")
+
           downloads = {}
           for dest, options in candidates.items():
               options.sort(key=lambda item: (item[0], item[2].lower(), item[3].lower(), item[4].lower()))
@@ -151,7 +239,27 @@ jobs:
               if len(options) > 1:
                   urls = {option[1] for option in options}
                   if len(urls) > 1 and selected[5] in {"rbf", "nvm"}:
-                      raise RuntimeError(f"Destination collision for {dest}: " + ", ".join(option[1] for option in options))
+                      # Some upstream repos mirror the same RBF in both
+                      # _Arcade/cores/ and cores/. Prefer the canonical _Arcade copy
+                      # only when all conflicting paths belong to the same repo.
+                      canonical = [
+                          option for option in options
+                          if "/_arcade/cores/" in ("/" + option[4].lower() + "/")
+                      ]
+                      same_repo = len({
+                          (option[2].lower(), option[3].lower()) for option in options
+                      }) == 1
+                      if selected[5] == "rbf" and canonical and same_repo:
+                          selected = canonical[0]
+                          print(
+                              f"Using canonical RBF path {selected[4]} for {dest}; "
+                              "ignoring mirrored copy."
+                          )
+                      else:
+                          raise RuntimeError(
+                              f"Destination collision for {dest}: "
+                              + ", ".join(option[1] for option in options)
+                          )
                   if len(urls) > 1 and selected[5] == "mra":
                       primary = [o for o in options if "/_mra/" not in ("/" + o[4].lower() + "/")]
                       if primary:
@@ -442,6 +550,7 @@ jobs:
           git add sync_manifest.txt
           git add missing_roms.csv 2>/dev/null || true
           git add _Arcade/ 2>/dev/null || true
+          git add _Console/ 2>/dev/null || true
           git add config/ 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to sync. Skipping build_db."
