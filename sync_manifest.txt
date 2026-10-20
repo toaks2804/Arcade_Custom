@@ -573,6 +573,9 @@ _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Tekken/Tekken (Japan TE1 Ver.B).mr
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Tekken/Tekken (World TE2 Ver.B).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Xevious 3D-G/Xevious 3D-G (Japan XV31-VER.A).mra
 _Arcade/_Unofficial/_XelaNotPu/_Alternatives/_Xevious 3D-G/Xevious 3D-G (World XV32-VER.A).mra
+_Arcade/_Unofficial/_decoryah/Jackie Chan - The Kung-Fu Master (rev 4).mra
+_Arcade/_Unofficial/_decoryah/Jackie Chan in Fists of Fire.mra
+_Arcade/_Unofficial/_decoryah/_Alternatives/_Jackie Chan - The Kung-Fu Master/Jackie Chan - The Kung-Fu Master (rev 3).mra
 _Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm Boogie Wings (Asia v1.5, 92.12.07).mra
 _Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm Boogie Wings (USA v1.7, 92.12.14).mra
 _Arcade/_Unofficial/_rmonic79/_Alternatives/_Boogie Wings/rm The Great Ragtime Show (Japan v1.3, 92.11.26).mra
