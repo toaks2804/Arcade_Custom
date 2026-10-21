@@ -243,7 +243,7 @@ _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Valkyrie no Densetsu/Valkyrie no 
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 2).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (bootleg with PIC16c57).mra
-_Arcade/_Unofficial/_Meathax/Air Rescue (World).mra
+_Arcade/_Unofficial/_Meathax/Air Rescue.mra
 _Arcade/_Unofficial/_Meathax/Alien3 The Gun.mra
 _Arcade/_Unofficial/_Meathax/Appoooh.mra
 _Arcade/_Unofficial/_Meathax/Arabian Fight.mra
@@ -262,6 +262,7 @@ _Arcade/_Unofficial/_Meathax/Brick Zone.mra
 _Arcade/_Unofficial/_Meathax/Bucky O'Hare.mra
 _Arcade/_Unofficial/_Meathax/Burning Rival.mra
 _Arcade/_Unofficial/_Meathax/Butasan - Pig's & Bomber's.mra
+_Arcade/_Unofficial/_Meathax/Chain Reaction.mra
 _Arcade/_Unofficial/_Meathax/Change Air Blade.mra
 _Arcade/_Unofficial/_Meathax/Charlie Ninja.mra
 _Arcade/_Unofficial/_Meathax/Cheese Chase.mra
@@ -279,12 +280,13 @@ _Arcade/_Unofficial/_Meathax/Dyna Gear.mra
 _Arcade/_Unofficial/_Meathax/Escape Kids.mra
 _Arcade/_Unofficial/_Meathax/Exterminator.mra
 _Arcade/_Unofficial/_Meathax/Fancy World - Earth of Crisis.mra
-_Arcade/_Unofficial/_Meathax/Funky Jet (bootleg).mra
+_Arcade/_Unofficial/_Meathax/Funky Jet.mra
 _Arcade/_Unofficial/_Meathax/Gain Ground.mra
 _Arcade/_Unofficial/_Meathax/Golden Axe The Revenge of Death Adder.mra
 _Arcade/_Unofficial/_Meathax/Hard Dunk.mra
 _Arcade/_Unofficial/_Meathax/Hard Head 2.mra
 _Arcade/_Unofficial/_Meathax/Hard Head.mra
+_Arcade/_Unofficial/_Meathax/Heavy Smash.mra
 _Arcade/_Unofficial/_Meathax/Heavy Unit.mra
 _Arcade/_Unofficial/_Meathax/HeliFire.mra
 _Arcade/_Unofficial/_Meathax/Holosseum.mra
@@ -300,6 +302,8 @@ _Arcade/_Unofficial/_Meathax/Kick Rider.mra
 _Arcade/_Unofficial/_Meathax/Kyros.mra
 _Arcade/_Unofficial/_Meathax/Liberation.mra
 _Arcade/_Unofficial/_Meathax/Magic Purple.mra
+_Arcade/_Unofficial/_Meathax/Magical Drop Plus 1.mra
+_Arcade/_Unofficial/_Meathax/Magical Drop.mra
 _Arcade/_Unofficial/_Meathax/Markham.mra
 _Arcade/_Unofficial/_Meathax/Meta Fox.mra
 _Arcade/_Unofficial/_Meathax/Metal Saver.mra
@@ -313,9 +317,11 @@ _Arcade/_Unofficial/_Meathax/Mysterious Stones.mra
 _Arcade/_Unofficial/_Meathax/NARC.mra
 _Arcade/_Unofficial/_Meathax/Namco Classic Collection Vol.1.mra
 _Arcade/_Unofficial/_Meathax/Namco Classic Collection Vol.2.mra
+_Arcade/_Unofficial/_Meathax/Narc [15kHz CRT].mra
 _Arcade/_Unofficial/_Meathax/Osman.mra
 _Arcade/_Unofficial/_Meathax/OutRunners.mra
 _Arcade/_Unofficial/_Meathax/Pang Pang.mra
+_Arcade/_Unofficial/_Meathax/Penguin Brothers.mra
 _Arcade/_Unofficial/_Meathax/Pigskin 621AD.mra
 _Arcade/_Unofficial/_Meathax/Primal Rage 2.mra
 _Arcade/_Unofficial/_Meathax/Pro Sports.mra
@@ -338,7 +344,7 @@ _Arcade/_Unofficial/_Meathax/Steel Force.mra
 _Arcade/_Unofficial/_Meathax/Stone Ball.mra
 _Arcade/_Unofficial/_Meathax/Storm Blade.mra
 _Arcade/_Unofficial/_Meathax/Strength & Skill.mra
-_Arcade/_Unofficial/_Meathax/Super Stingray (Japan).mra
+_Arcade/_Unofficial/_Meathax/Super Stingray.mra
 _Arcade/_Unofficial/_Meathax/Super Trio.mra
 _Arcade/_Unofficial/_Meathax/Super Visual Football European Sega Cup.mra
 _Arcade/_Unofficial/_Meathax/Survival Arts.mra
@@ -347,7 +353,6 @@ _Arcade/_Unofficial/_Meathax/The Lost Castle In Darkmist.mra
 _Arcade/_Unofficial/_Meathax/The Main Event.mra
 _Arcade/_Unofficial/_Meathax/The Simpsons.mra
 _Arcade/_Unofficial/_Meathax/Title Fight.mra
-_Arcade/_Unofficial/_Meathax/Tumble Pop (bootleg with PIC).mra
 _Arcade/_Unofficial/_Meathax/Tumble Pop (bootleg).mra
 _Arcade/_Unofficial/_Meathax/Twin Eagle II - The Rescue Mission.mra
 _Arcade/_Unofficial/_Meathax/Ultimate Tennis.mra
