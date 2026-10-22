@@ -262,11 +262,13 @@ _Arcade/_Unofficial/_Meathax/Brick Zone.mra
 _Arcade/_Unofficial/_Meathax/Bucky O'Hare.mra
 _Arcade/_Unofficial/_Meathax/Burning Rival.mra
 _Arcade/_Unofficial/_Meathax/Butasan - Pig's & Bomber's.mra
+_Arcade/_Unofficial/_Meathax/Captain Silver.mra
 _Arcade/_Unofficial/_Meathax/Chain Reaction.mra
 _Arcade/_Unofficial/_Meathax/Change Air Blade.mra
 _Arcade/_Unofficial/_Meathax/Charlie Ninja.mra
 _Arcade/_Unofficial/_Meathax/Cheese Chase.mra
 _Arcade/_Unofficial/_Meathax/Choky! Choky!.mra
+_Arcade/_Unofficial/_Meathax/Cobra-Command.mra
 _Arcade/_Unofficial/_Meathax/Cookie & Bibi.mra
 _Arcade/_Unofficial/_Meathax/Crack Down.mra
 _Arcade/_Unofficial/_Meathax/Dark Edge.mra
@@ -282,7 +284,9 @@ _Arcade/_Unofficial/_Meathax/Exterminator.mra
 _Arcade/_Unofficial/_Meathax/Fancy World - Earth of Crisis.mra
 _Arcade/_Unofficial/_Meathax/Funky Jet.mra
 _Arcade/_Unofficial/_Meathax/Gain Ground.mra
+_Arcade/_Unofficial/_Meathax/Garyo Retsuden.mra
 _Arcade/_Unofficial/_Meathax/Golden Axe The Revenge of Death Adder.mra
+_Arcade/_Unofficial/_Meathax/Gondomania.mra
 _Arcade/_Unofficial/_Meathax/Hard Dunk.mra
 _Arcade/_Unofficial/_Meathax/Hard Head 2.mra
 _Arcade/_Unofficial/_Meathax/Hard Head.mra
@@ -300,11 +304,13 @@ _Arcade/_Unofficial/_Meathax/Jumping Jack.mra
 _Arcade/_Unofficial/_Meathax/Jurassic Park.mra
 _Arcade/_Unofficial/_Meathax/Kick Rider.mra
 _Arcade/_Unofficial/_Meathax/Kyros.mra
+_Arcade/_Unofficial/_Meathax/Last Mission.mra
 _Arcade/_Unofficial/_Meathax/Liberation.mra
 _Arcade/_Unofficial/_Meathax/Magic Purple.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop Plus 1.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop.mra
 _Arcade/_Unofficial/_Meathax/Markham.mra
+_Arcade/_Unofficial/_Meathax/Meikyuu Hunter G.mra
 _Arcade/_Unofficial/_Meathax/Meta Fox.mra
 _Arcade/_Unofficial/_Meathax/Metal Saver.mra
 _Arcade/_Unofficial/_Meathax/Metamorphic Force.mra
@@ -325,6 +331,7 @@ _Arcade/_Unofficial/_Meathax/Penguin Brothers.mra
 _Arcade/_Unofficial/_Meathax/Pigskin 621AD.mra
 _Arcade/_Unofficial/_Meathax/Primal Rage 2.mra
 _Arcade/_Unofficial/_Meathax/Pro Sports.mra
+_Arcade/_Unofficial/_Meathax/Psycho-Nics Oscar.mra
 _Arcade/_Unofficial/_Meathax/Rad Mobile.mra
 _Arcade/_Unofficial/_Meathax/Rad Rally.mra
 _Arcade/_Unofficial/_Meathax/Robo Wres 2001.mra
@@ -332,7 +339,9 @@ _Arcade/_Unofficial/_Meathax/S.P.Y. - Special Project Y.mra
 _Arcade/_Unofficial/_Meathax/S.T.U.N. Runner.mra
 _Arcade/_Unofficial/_Meathax/SD Fighters.mra
 _Arcade/_Unofficial/_Meathax/SF-HiSplitter.mra
+_Arcade/_Unofficial/_Meathax/SRD - Super Real Darwin.mra
 _Arcade/_Unofficial/_Meathax/SegaSonic The Hedgehog.mra
+_Arcade/_Unofficial/_Meathax/Shackled.mra
 _Arcade/_Unofficial/_Meathax/Sheriff.mra
 _Arcade/_Unofficial/_Meathax/Simpsons.mra
 _Arcade/_Unofficial/_Meathax/Slip Stream.mra
@@ -351,8 +360,10 @@ _Arcade/_Unofficial/_Meathax/Survival Arts.mra
 _Arcade/_Unofficial/_Meathax/The Crystal of Kings.mra
 _Arcade/_Unofficial/_Meathax/The Lost Castle In Darkmist.mra
 _Arcade/_Unofficial/_Meathax/The Main Event.mra
+_Arcade/_Unofficial/_Meathax/The Real Ghostbusters.mra
 _Arcade/_Unofficial/_Meathax/The Simpsons.mra
 _Arcade/_Unofficial/_Meathax/Title Fight.mra
+_Arcade/_Unofficial/_Meathax/Tumble Pop (bootleg with PIC).mra
 _Arcade/_Unofficial/_Meathax/Tumble Pop (bootleg).mra
 _Arcade/_Unofficial/_Meathax/Twin Eagle II - The Rescue Mission.mra
 _Arcade/_Unofficial/_Meathax/Ultimate Tennis.mra
@@ -370,6 +381,12 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Alien3 The Gun/Alien3 The Gun (US, R
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Arabian Fight/Arabian Fight (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Arabian Fight/Arabian Fight (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Burning Rival/Burning Rival (Japan).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Captain Silver/Captain Silver (Japan, revision 1).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Captain Silver/Captain Silver (Japan, revision 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Cobra-Command/Cobra-Command (Japan).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Cobra-Command/Cobra-Command (Japan, bootleg).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Cobra-Command/Cobra-Command (World-US revision 4).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Cobra-Command/Cobra-Command (World-US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Dark Edge/Dark Edge (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Devastators/Devastators (ver. 2).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Devastators/Devastators (ver. V).mra
@@ -379,6 +396,8 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Do! Run Run/Super Pierrot.mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Escape Kids/Escape Kids (Japan, 2 Players).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Golden Axe The Revenge of Death Adder/Golden Axe The Revenge of Death Adder (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Golden Axe The Revenge of Death Adder/Golden Axe The Revenge of Death Adder (US, Rev A).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Gondomania/Gondomania (US).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Gondomania/Makyou Senshi (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Hard Dunk/Hard Dunk (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan, alternate ROM format).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_HeavyUnit/Heavy Unit (Japan, newer).mra
@@ -390,6 +409,9 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, 
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, Rev A, Conversion).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Jurassic Park/Jurassic Park (Japan, Rev A, Deluxe).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Kyros/Kyros no Yakata (Japan).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Last Mission/Last Mission (Japan).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Last Mission/Last Mission (US revision 5).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Last Mission/Last Mission (US revision 6).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Metamorphic Force/Metamorphic Force (ver AAA).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Metamorphic Force/Metamorphic Force (ver EAA - alternate).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Metamorphic Force/Metamorphic Force (ver JAA).mra
@@ -398,9 +420,16 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Mr. Do's Castle/Mr. Do! vs. Unicorns
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Osman/Cannon Dancer (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Outrunners/OutRunners (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Outrunners/OutRunners (US).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Psycho-Nics Oscar/Psycho-Nics Oscar (Japan revision 1).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Psycho-Nics Oscar/Psycho-Nics Oscar (Japan revision 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Psycho-Nics Oscar/Psycho-Nics Oscar (US).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Psycho-Nics Oscar/Psycho-Nics Oscar (World revision 0, bootleg).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Rad Rally/Rad Rally (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Rad Rally/Rad Rally (US).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_S.P.Y/S.P.Y. - Special Project Y. (US ver. M).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_SRD Super Real Darwin/SRD - Super Real Darwin (Japan).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_SRD Super Real Darwin/SRD - Super Real Darwin (Japan, bootleg).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_Shackled/Breywood (Japan revision 2).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Slip Stream/Slip Stream (Hispanic 950515).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Spider-Man The Videogame/Spider-Man The Videogame (Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_Spider-Man The Videogame/Spider-Man The Videogame (US, Rev A).mra
@@ -411,6 +440,9 @@ _Arcade/_Unofficial/_Meathax/_Alternatives/_Super Visual Football European Sega 
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/Ring no Ohja (Japan 2 Players ver. N).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/The Main Event (2 Players ver. X).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Main Event/The Main Event (4 Players ver. F).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Real Ghostbusters/The Real Ghostbusters (US 2 Players).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Real Ghostbusters/The Real Ghostbusters (US 3 Players, revision 2).mra
+_Arcade/_Unofficial/_Meathax/_Alternatives/_The Real Ghostbusters/The Real Ghostbusters (US 3 Players, revision 3B-).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players Asia).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players Japan).mra
 _Arcade/_Unofficial/_Meathax/_Alternatives/_The Simpsons/The Simpsons (2 Players World, set 1).mra
