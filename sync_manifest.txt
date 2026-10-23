@@ -243,6 +243,7 @@ _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Valkyrie no Densetsu/Valkyrie no 
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 1).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (Jaleco, set 2).mra
 _Arcade/_Unofficial/_KuzeArcade/_Alternatives/_Vandyke/Vandyke (bootleg with PIC16c57).mra
+_Arcade/_Unofficial/_Meathax/Action Hollywood.mra
 _Arcade/_Unofficial/_Meathax/Air Rescue.mra
 _Arcade/_Unofficial/_Meathax/Alien3 The Gun.mra
 _Arcade/_Unofficial/_Meathax/Appoooh.mra
