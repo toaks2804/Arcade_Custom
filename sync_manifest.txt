@@ -307,6 +307,7 @@ _Arcade/_Unofficial/_Meathax/Kick Rider.mra
 _Arcade/_Unofficial/_Meathax/Kyros.mra
 _Arcade/_Unofficial/_Meathax/Last Mission.mra
 _Arcade/_Unofficial/_Meathax/Liberation.mra
+_Arcade/_Unofficial/_Meathax/Mad Motor (prototype).mra
 _Arcade/_Unofficial/_Meathax/Magic Purple.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop Plus 1.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop.mra

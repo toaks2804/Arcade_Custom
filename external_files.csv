@@ -124,6 +124,7 @@ games/mame/srdarwin.zip,https://archive.org/download/mame-roms-merged_/MAME%20RO
 games/mame/oscar.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/oscar.zip,517757,876585f149e5192f285f90fc787a5bfa
 games/mame/cobracom.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/cobracom.zip,592462,801e572c3ac8bf692f8d6457a8f07769
 games/mame/actionhw.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/actionhw.zip,1321130,560b7326579a82c1f92de6949a84960b
+games/mame/madmotor.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/madmotor.zip,1296979,854c4c5e172817a1dd0044b78f4b4198
 _Arcade/cores/Arcade-GingaNin_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-GingaNin_MiSTer/main/releases/Arcade-GingaNin_20261015.rbf,3914076,6a5aafa77f6d7d43e2b656bee74d70db
 _Arcade/cores/Arcade-JalecoMS1BCD_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-JalecoMS1BCD_MiSTer/main/releases/Arcade-JalecoMS1BCD_20261015.rbf,4342576,29d883a6269cec2646398ea594d079bb
 _Arcade/cores/Arcade-NamcoS2_LW_20261007.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NamcoSystem2_MiSTer/main/releases/Arcade-NamcoS2_LW_20261007.rbf,4623184,41dd35ebc3809019e62163da6111e04e
@@ -157,6 +158,7 @@ _Arcade/cores/Arcade-HeavyUnit_20261015.rbf,https://raw.githubusercontent.com/me
 _Arcade/cores/Arcade-I-Robot_20261019.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-I-Robot_20261019.rbf,3560660,f2b889c980a6e9406d52785f7a2ae4e0
 _Arcade/cores/Arcade-IkkiSunsoft_20261011.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-IkkiSunsoft_20261011.rbf,3307648,e597666f82567c06099164a2bbaf54bc
 _Arcade/cores/Arcade-MCR68_20260915.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MCR68_20260915.rbf,3653892,d4f355a8e4ca379e6387d0d8356cf337
+_Arcade/cores/Arcade-MadMotor_20261025.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MadMotor_20261025.rbf,3999172,5c661e3fb2df281a8907ee4b7b2c4596
 _Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,4303020,d47721c194a68e6572cd7ef760ec7a1b
 _Arcade/cores/Arcade-MysteriousStones_20261014.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MysteriousStones_20261014.rbf,3251408,e386b7868744b9d23ca02be4c2d0b02e
 _Arcade/cores/Arcade-NARC_20261020.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-NARC_20261020.rbf,4279840,7d69cb822d90378c05620bc6e55fa19a
@@ -195,7 +197,7 @@ _Arcade/cores/blahm1d_wolfunit_20261005.rbf,https://raw.githubusercontent.com/bl
 _Arcade/cores/blahm1d_xunit_20260918.rbf,https://raw.githubusercontent.com/blahm1d/MiSTer-cores/main/_Arcade/cores/blahm1d_xunit_20260918.rbf,4583508,16d0eee4b7277818e4c196cdf414dbd5
 _Arcade/cores/blahm1d_yunit_20260922.rbf,https://raw.githubusercontent.com/blahm1d/MiSTer-cores/main/_Arcade/cores/blahm1d_yunit_20260922.rbf,4328716,2148e8ca18188c3c388925abcdbb65cd
 _Arcade/cores/blahm1d_yunitadpcm_20260922.rbf,https://raw.githubusercontent.com/blahm1d/MiSTer-cores/main/_Arcade/cores/blahm1d_yunitadpcm_20260922.rbf,3976136,84356e788928bba4c0906bb49676d644
-_Arcade/cores/Arcade-Atari-G1_20261017.rbf,https://raw.githubusercontent.com/Gm0rk/Arcade-Atari-G1_MiSTer/main/releases/Arcade-Atari-G1_20261017.rbf,3865600,dce6e1c88a771779303f94976a239dea
+_Arcade/cores/Arcade-Atari-G1_20261025.rbf,https://raw.githubusercontent.com/Gm0rk/Arcade-Atari-G1_MiSTer/main/releases/Arcade-Atari-G1_20261025.rbf,3870168,d86bcb5d3644ade29919b29f44b952b5
 _Arcade/cores/xnbrkthru_20260705.rbf,https://raw.githubusercontent.com/XelaNotPu/BreakThru_MiSTer/main/RELEASE/_Arcade/cores/xnbrkthru_20260705.rbf,3839496,68928e444bd9c02b41c85ff90571b8d9
 _Arcade/cores/XNZN1_20260721.rbf,https://raw.githubusercontent.com/XelaNotPu/ZN1_MiSTer/main/release/_Arcade/cores/XNZN1_20260721.rbf,4336816,d7a45586046888289366918d4c7bb410
 _Arcade/cores/Arcade-XNZN1TaitoFX1B_20260814.rbf,https://raw.githubusercontent.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer/main/releases/_Arcade/cores/Arcade-XNZN1TaitoFX1B_20260814.rbf,4496456,0967af40379239458240a2467df580ed
