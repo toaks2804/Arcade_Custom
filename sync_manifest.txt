@@ -251,10 +251,12 @@ _Arcade/_Unofficial/_Meathax/Arabian Fight.mra
 _Arcade/_Unofficial/_Meathax/Arbalester.mra
 _Arcade/_Unofficial/_Meathax/Arch Rivals.mra
 _Arcade/_Unofficial/_Meathax/Argus.mra
+_Arcade/_Unofficial/_Meathax/Asylum (prototype).mra
 _Arcade/_Unofficial/_Meathax/B-Wings.mra
 _Arcade/_Unofficial/_Meathax/B.C. Story.mra
 _Arcade/_Unofficial/_Meathax/BanBam.mra
 _Arcade/_Unofficial/_Meathax/Battletoads.mra
+_Arcade/_Unofficial/_Meathax/Big Fight Big Trouble In The Atlantic Ocean.mra
 _Arcade/_Unofficial/_Meathax/Black Panther.mra
 _Arcade/_Unofficial/_Meathax/Blasted.mra
 _Arcade/_Unofficial/_Meathax/Bonanza Bros.mra
@@ -272,6 +274,7 @@ _Arcade/_Unofficial/_Meathax/Choky! Choky!.mra
 _Arcade/_Unofficial/_Meathax/Cobra-Command.mra
 _Arcade/_Unofficial/_Meathax/Cookie & Bibi.mra
 _Arcade/_Unofficial/_Meathax/Crack Down.mra
+_Arcade/_Unofficial/_Meathax/Cycle Warriors.mra
 _Arcade/_Unofficial/_Meathax/Dark Edge.mra
 _Arcade/_Unofficial/_Meathax/Devastators.mra
 _Arcade/_Unofficial/_Meathax/Do! Run Run.mra
@@ -345,7 +348,6 @@ _Arcade/_Unofficial/_Meathax/SRD - Super Real Darwin.mra
 _Arcade/_Unofficial/_Meathax/SegaSonic The Hedgehog.mra
 _Arcade/_Unofficial/_Meathax/Shackled.mra
 _Arcade/_Unofficial/_Meathax/Sheriff.mra
-_Arcade/_Unofficial/_Meathax/Simpsons.mra
 _Arcade/_Unofficial/_Meathax/Slip Stream.mra
 _Arcade/_Unofficial/_Meathax/Space Fever.mra
 _Arcade/_Unofficial/_Meathax/Space Launcher.mra

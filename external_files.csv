@@ -125,6 +125,9 @@ games/mame/oscar.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%
 games/mame/cobracom.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/cobracom.zip,592462,801e572c3ac8bf692f8d6457a8f07769
 games/mame/actionhw.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/actionhw.zip,1321130,560b7326579a82c1f92de6949a84960b
 games/mame/madmotor.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/madmotor.zip,1296979,854c4c5e172817a1dd0044b78f4b4198
+games/mame/bigfight.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/bigfight.zip,4033397,35d32e41930c0ef4f7d1313782ce5f99
+games/mame/cyclwarr.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/cyclwarr.zip,2859964,86480fce313959fab079d1f9f86c0665
+games/mame/asylum.zip,https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/asylum.zip,2396177,2962b861c8ef9156f8f46633c8674bc4
 _Arcade/cores/Arcade-GingaNin_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-GingaNin_MiSTer/main/releases/Arcade-GingaNin_20261015.rbf,3914076,6a5aafa77f6d7d43e2b656bee74d70db
 _Arcade/cores/Arcade-JalecoMS1BCD_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-JalecoMS1BCD_MiSTer/main/releases/Arcade-JalecoMS1BCD_20261015.rbf,4342576,29d883a6269cec2646398ea594d079bb
 _Arcade/cores/Arcade-NamcoS2_LW_20261007.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NamcoSystem2_MiSTer/main/releases/Arcade-NamcoS2_LW_20261007.rbf,4623184,41dd35ebc3809019e62163da6111e04e
@@ -133,9 +136,9 @@ _Arcade/cores/Arcade-NamcoS2_SG_20261007.rbf,https://raw.githubusercontent.com/k
 _Arcade/cores/Arcade-NamcoS2_STD_20261007.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NamcoSystem2_MiSTer/main/releases/Arcade-NamcoS2_STD_20261007.rbf,4570232,acf940d31aa920991ca2fedac3fd1f1f
 _Arcade/cores/Arcade-NamcoS2_SZ_20261007.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NamcoSystem2_MiSTer/main/releases/Arcade-NamcoS2_SZ_20261007.rbf,4507504,02cbc70839a045c58bd37a2b5fee8bdb
 _Arcade/cores/Arcade-NMK16_Afega_20261007.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Afega_20261007.rbf,4057440,5ab70b89eda626522bcd6d5782a67a40
-_Arcade/cores/Arcade-NMK16_Gunnail_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Gunnail_20261015.rbf,4368588,466d25055e180026276b3366366c9f0c
-_Arcade/cores/Arcade-NMK16_Macross2_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Macross2_20261015.rbf,4097952,c2a89c1489e5d199ce7e2469d5dc5e7a
-_Arcade/cores/Arcade-NMK16_Raphero_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Raphero_20261015.rbf,4218428,1184479692e76fec339ee7cc0340ba30
+_Arcade/cores/Arcade-NMK16_Gunnail_20261026.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Gunnail_20261026.rbf,4374016,c91b39e922ec4b8a48caef2e20c464ac
+_Arcade/cores/Arcade-NMK16_Macross2_20261026.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Macross2_20261026.rbf,4115652,72dfec4a5b5a29f43d892d6f8069cbce
+_Arcade/cores/Arcade-NMK16_Raphero_20261026.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMK16_MiSTer/master/releases/Arcade-NMK16_Raphero_20261026.rbf,4228388,ffa6de1db009109c49c5530a12e7bb0f
 _Arcade/cores/Arcade-NMKBP964_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-NMKBP964_MiSTer/main/releases/Arcade-NMKBP964_20261015.rbf,4541852,756d6d1328fdcd4dd7182ae1885805d7
 _Arcade/cores/Arcade-SandScrp_20261015.rbf,https://raw.githubusercontent.com/kuzearcade/Arcade-SandScrp_MiSTer/main/releases/Arcade-SandScrp_20261015.rbf,3622124,4a696c9df48d990e8fc1b19bcb1d5636
 _Arcade/cores/Arcade-AH_20261024.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-AH_20261024.rbf,3357844,e4952e2a122558f71ef1877283ed8b32
@@ -144,6 +147,7 @@ _Arcade/cores/Arcade-Appoooh_20260916.rbf,https://raw.githubusercontent.com/meat
 _Arcade/cores/Arcade-Arbalester_20261019.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Arbalester_20261019.rbf,3333348,dce31d09776801ee5bd489312e25177e
 _Arcade/cores/Arcade-Argus_20261014.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Argus_20261014.rbf,4143276,3c568e7a12175066ad19eade3071ccb1
 _Arcade/cores/Arcade-Battletoads_20261020.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Battletoads_20261020.rbf,4121004,6c28ddc18ed8f5efacf73784d0c212d9
+_Arcade/cores/Arcade-BigFight_20261027.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-BigFight_20261027.rbf,4242552,13d4adff4c435379c344cc2c9f2f8fe4
 _Arcade/cores/Arcade-BlackPanther_20261019.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-BlackPanther_20261019.rbf,3632960,7a9ee246b6dd2cd5b0e88eabbb50b0b0
 _Arcade/cores/Arcade-Bucky_20260812.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Bucky_20260812.rbf,3746980,4e149025aa0ce1a486f40601244f50b9
 _Arcade/cores/Arcade-CrystalSystem_20261011.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-CrystalSystem_20261011.rbf,3656708,994a9a51a724a827a7cc5224ebc5ceaa
@@ -157,6 +161,7 @@ _Arcade/cores/Arcade-Exterminator_20261019b.rbf,https://raw.githubusercontent.co
 _Arcade/cores/Arcade-HeavyUnit_20261015.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-HeavyUnit_20261015.rbf,3399044,e234b9c9805ecb9cb436279442340b2b
 _Arcade/cores/Arcade-I-Robot_20261019.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-I-Robot_20261019.rbf,3560660,f2b889c980a6e9406d52785f7a2ae4e0
 _Arcade/cores/Arcade-IkkiSunsoft_20261011.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-IkkiSunsoft_20261011.rbf,3307648,e597666f82567c06099164a2bbaf54bc
+_Arcade/cores/Arcade-Leland_20261027.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-Leland_20261027.rbf,4085260,84ba8961e814bcf5723dd955914ecade
 _Arcade/cores/Arcade-MCR68_20260915.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MCR68_20260915.rbf,3653892,d4f355a8e4ca379e6387d0d8356cf337
 _Arcade/cores/Arcade-MadMotor_20261025.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MadMotor_20261025.rbf,3999172,5c661e3fb2df281a8907ee4b7b2c4596
 _Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,https://raw.githubusercontent.com/meathax/meatcores/main/_Arcade/cores/Arcade-MetamorphicForce_20261014.rbf,4303020,d47721c194a68e6572cd7ef760ec7a1b
