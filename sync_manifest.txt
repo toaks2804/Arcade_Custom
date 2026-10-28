@@ -265,6 +265,7 @@ _Arcade/_Unofficial/_Meathax/Brick Zone.mra
 _Arcade/_Unofficial/_Meathax/Bucky O'Hare.mra
 _Arcade/_Unofficial/_Meathax/Burning Rival.mra
 _Arcade/_Unofficial/_Meathax/Butasan - Pig's & Bomber's.mra
+_Arcade/_Unofficial/_Meathax/Caliber 50 (Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/Captain Silver.mra
 _Arcade/_Unofficial/_Meathax/Chain Reaction.mra
 _Arcade/_Unofficial/_Meathax/Change Air Blade.mra
@@ -275,6 +276,7 @@ _Arcade/_Unofficial/_Meathax/Cobra-Command.mra
 _Arcade/_Unofficial/_Meathax/Cookie & Bibi.mra
 _Arcade/_Unofficial/_Meathax/Crack Down.mra
 _Arcade/_Unofficial/_Meathax/Cycle Warriors.mra
+_Arcade/_Unofficial/_Meathax/Daikaiju no Gyakushu.mra
 _Arcade/_Unofficial/_Meathax/Dark Edge.mra
 _Arcade/_Unofficial/_Meathax/Devastators.mra
 _Arcade/_Unofficial/_Meathax/Do! Run Run.mra
@@ -286,6 +288,7 @@ _Arcade/_Unofficial/_Meathax/Dyna Gear.mra
 _Arcade/_Unofficial/_Meathax/Escape Kids.mra
 _Arcade/_Unofficial/_Meathax/Exterminator.mra
 _Arcade/_Unofficial/_Meathax/Fancy World - Earth of Crisis.mra
+_Arcade/_Unofficial/_Meathax/Forgotten Worlds (World, Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/Funky Jet.mra
 _Arcade/_Unofficial/_Meathax/Gain Ground.mra
 _Arcade/_Unofficial/_Meathax/Garyo Retsuden.mra
@@ -294,6 +297,7 @@ _Arcade/_Unofficial/_Meathax/Gondomania.mra
 _Arcade/_Unofficial/_Meathax/Hard Dunk.mra
 _Arcade/_Unofficial/_Meathax/Hard Head 2.mra
 _Arcade/_Unofficial/_Meathax/Hard Head.mra
+_Arcade/_Unofficial/_Meathax/Heavy Barrel (Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/Heavy Smash.mra
 _Arcade/_Unofficial/_Meathax/Heavy Unit.mra
 _Arcade/_Unofficial/_Meathax/HeliFire.mra
@@ -302,6 +306,7 @@ _Arcade/_Unofficial/_Meathax/I, Robot.mra
 _Arcade/_Unofficial/_Meathax/Ikki.mra
 _Arcade/_Unofficial/_Meathax/Indoor Soccer.mra
 _Arcade/_Unofficial/_Meathax/Jack Rabbit.mra
+_Arcade/_Unofficial/_Meathax/Jackal (World, Rotary Joystick).mra
 _Arcade/_Unofficial/_Meathax/Joe & Mac Returns.mra
 _Arcade/_Unofficial/_Meathax/Jump Kids.mra
 _Arcade/_Unofficial/_Meathax/Jumping Jack.mra
@@ -311,6 +316,7 @@ _Arcade/_Unofficial/_Meathax/Kyros.mra
 _Arcade/_Unofficial/_Meathax/Last Mission.mra
 _Arcade/_Unofficial/_Meathax/Liberation.mra
 _Arcade/_Unofficial/_Meathax/Mad Motor (prototype).mra
+_Arcade/_Unofficial/_Meathax/Mad Planets (Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/Magic Purple.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop Plus 1.mra
 _Arcade/_Unofficial/_Meathax/Magical Drop.mra
@@ -319,6 +325,7 @@ _Arcade/_Unofficial/_Meathax/Meikyuu Hunter G.mra
 _Arcade/_Unofficial/_Meathax/Meta Fox.mra
 _Arcade/_Unofficial/_Meathax/Metal Saver.mra
 _Arcade/_Unofficial/_Meathax/Metamorphic Force.mra
+_Arcade/_Unofficial/_Meathax/Midnight Resistance (Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/Money Money.mra
 _Arcade/_Unofficial/_Meathax/Monster Slider.mra
 _Arcade/_Unofficial/_Meathax/Mortal Race.mra
@@ -342,9 +349,11 @@ _Arcade/_Unofficial/_Meathax/Rad Rally.mra
 _Arcade/_Unofficial/_Meathax/Robo Wres 2001.mra
 _Arcade/_Unofficial/_Meathax/S.P.Y. - Special Project Y.mra
 _Arcade/_Unofficial/_Meathax/S.T.U.N. Runner.mra
+_Arcade/_Unofficial/_Meathax/SAR - Search And Rescue (Twin Stick).mra
 _Arcade/_Unofficial/_Meathax/SD Fighters.mra
 _Arcade/_Unofficial/_Meathax/SF-HiSplitter.mra
 _Arcade/_Unofficial/_Meathax/SRD - Super Real Darwin.mra
+_Arcade/_Unofficial/_Meathax/SWAT Police.mra
 _Arcade/_Unofficial/_Meathax/SegaSonic The Hedgehog.mra
 _Arcade/_Unofficial/_Meathax/Shackled.mra
 _Arcade/_Unofficial/_Meathax/Sheriff.mra
